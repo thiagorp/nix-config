@@ -36,10 +36,9 @@
 
   nix = {
     trustedUsers = [ "root" "thiago" "mercury" "nixbld" ];
-    extraOptions = ''
-      extra-substituters = https://cache.mercury.com
-      trusted-public-keys = cache.mercury.com:yhfFlgvqtv0cAxzflJ0aZW3mbulx4+5EOZm6k3oML+I= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
-    '';
+    binaryCachePublicKeys =
+      [ "cache.mercury.com:yhfFlgvqtv0cAxzflJ0aZW3mbulx4+5EOZm6k3oML+I=" ];
+    trustedBinaryCaches = [ "https://cache.mercury.com" ];
   };
 
   networking.computerName = "Caco MacBook Pro";
