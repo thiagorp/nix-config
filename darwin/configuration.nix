@@ -1,7 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ <home-manager/nix-darwin> ./homebrew.nix ];
+  imports = [ <home-manager/nix-darwin> ./homebrew.nix ./postgresql.nix ];
+
+  nixpkgs.overlays = import ./overlays;
 
   environment = {
     # List packages installed in system profile. To search by name, run:
