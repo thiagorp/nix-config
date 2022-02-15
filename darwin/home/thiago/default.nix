@@ -1,7 +1,8 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./git.nix ./nvim.nix ./ssh.nix ./vscode.nix ./zsh.nix ];
+  imports =
+    [ ./direnv.nix ./git.nix ./nvim.nix ./ssh.nix ./vscode.nix ./zsh.nix ];
 
   nixpkgs.config.allowUnfree = true;
 
@@ -9,7 +10,7 @@
     username = "thiago";
     homeDirectory = "/Users/thiago";
 
-    packages = with pkgs; [ bat direnv fzf jq nixpkgs-fmt watchman ];
+    packages = with pkgs; [ bat fzf jq nixpkgs-fmt watchman ];
 
     stateVersion = "22.05";
   };
