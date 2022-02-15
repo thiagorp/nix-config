@@ -3,12 +3,16 @@
 {
   imports = [ <home-manager/nix-darwin> ];
 
-  # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
-  environment.systemPackages = with pkgs; [ vim nixfmt ];
+  environment = {
+    # List packages installed in system profile. To search by name, run:
+    # $ nix-env -qaP | grep wget
+    systemPackages = with pkgs; [ vim nixfmt ];
 
-  # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
-  environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
+    # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
+    darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
+
+    shells = [ pkgs.zsh ];
+  };
 
   services = { nix-daemon = { enable = true; }; };
 
@@ -34,6 +38,8 @@
     };
   };
 
+  programs = { zsh = { enable = true; }; };
+
   nix = {
     trustedUsers = [ "root" "thiago" "mercury" "nixbld" ];
     binaryCachePublicKeys =
@@ -48,6 +54,7 @@
     thiago = {
       name = "thiago";
       home = "/Users/thiago";
+      shell = pkgs.zsh;
     };
   };
 
