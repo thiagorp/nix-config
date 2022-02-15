@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ <home-manager/nix-darwin> ];
+  imports = [ <home-manager/nix-darwin> ./homebrew.nix ];
 
   environment = {
     # List packages installed in system profile. To search by name, run:
