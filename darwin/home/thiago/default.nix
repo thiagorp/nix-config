@@ -9,7 +9,7 @@
     username = "thiago";
     homeDirectory = "/Users/thiago";
 
-    packages = with pkgs; [ bat direnv fzf jq nixpkgs-fmt ];
+    packages = with pkgs; [ bat direnv fzf jq nixpkgs-fmt watchman ];
 
     stateVersion = "22.05";
   };
