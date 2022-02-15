@@ -25,6 +25,7 @@ in {
     sessionVariables = {
       ARCHFLAGS = "-arch arm64";
       NVIM_TUI_ENABLE_TRUE_COLOR = 1;
+      EDITOR = "nvim";
     };
 
     shellAliases = {
