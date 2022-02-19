@@ -1,8 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports =
-    [ ./direnv.nix ./git.nix ./nvim.nix ./ssh.nix ./vscode.nix ./zsh.nix ];
+  imports = [ ./direnv.nix ./git.nix ./nvim.nix ./ssh.nix ./vscode ./zsh.nix ];
 
   nixpkgs.config.allowUnfree = true;
 

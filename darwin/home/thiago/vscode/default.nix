@@ -1,26 +1,34 @@
 { pkgs, ... }:
-{
+
+let
+  inherit (pkgs.vscode-utils) extensionsFromVscodeMarketplace;
+
+  customExtensions = import ./extensions.nix;
+
+in {
   nixpkgs.config.allowUnfree = true;
-  
+
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-extensions; [
-      arrterian.nix-env-selector
-      bbenoist.nix
-      bradlc.vscode-tailwindcss
-      brettm12345.nixfmt-vscode
-      dbaeumer.vscode-eslint
-      eamodio.gitlens
-      esbenp.prettier-vscode
-      github.github-vscode-theme
-      graphql.vscode-graphql
-      haskell.haskell
-      hookyqr.beautify
-      jpoissonnier.vscode-styled-components
-      justusadam.language-haskell
-      mechatroner.rainbow-csv
-      svelte.svelte-vscode
-    ];
+    extensions = with pkgs.vscode-extensions;
+      [
+        arrterian.nix-env-selector
+        bbenoist.nix
+        bradlc.vscode-tailwindcss
+        brettm12345.nixfmt-vscode
+        dbaeumer.vscode-eslint
+        eamodio.gitlens
+        esbenp.prettier-vscode
+        github.github-vscode-theme
+        graphql.vscode-graphql
+        haskell.haskell
+        hookyqr.beautify
+        jpoissonnier.vscode-styled-components
+        justusadam.language-haskell
+        mechatroner.rainbow-csv
+        svelte.svelte-vscode
+      ] ++ extensionsFromVscodeMarketplace customExtensions;
+
     userSettings = {
       "editor.tabSize" = 2;
       "explorer.confirmDragAndDrop" = false;
