@@ -29,6 +29,7 @@ in {
     };
 
     shellAliases = {
+      drs = "darwin-rebuild switch";
       gcb = "git checkout -b";
       gcm = "git checkout master";
       update-nix = "${pkgs.vscode} $HOME/.config/nixpkgs/darwin";
