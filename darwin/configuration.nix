@@ -63,6 +63,6 @@
   home-manager = {
     useUserPackages = true;
     verbose = true;
-    users.thiago = (import ./home/thiago);
+    users.thiago = (import ../home/thiago);
   };
 }
