@@ -1,4 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, config, lib, ... }:
+
+with lib;
 
 let
   extras = [ ./zsh/p10k.zsh ./zsh/git.zsh ];
@@ -6,6 +8,11 @@ let
   extraInitExtra =
     builtins.foldl' (soFar: new: soFar + "\n" + builtins.readFile new) ""
     extras;
+
+  zplugPlugins = [{
+    name = "romkatv/powerlevel10k";
+    tags = [ "as:theme" "depth:1" ];
+  }];
 in {
   programs.zsh = {
     enable = true;
@@ -45,6 +52,27 @@ in {
       [ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
     '' + extraInitExtra;
 
+    # Can't use the native zsh implementation because we can't init zplug if we're in a fig terminal
+    # See https://github.com/withfig/fig/issues/920
+    initExtraBeforeCompInit = ''
+      source ${pkgs.zplug}/init.zsh
+      export ZPLUG_HOME=${config.home.homeDirectory}/.zplug
+      ${optionalString (zplugPlugins != [ ]) ''
+        ${concatStrings (map (plugin: ''
+          zplug "${plugin.name}"${
+            optionalString (plugin.tags != [ ]) ''
+              ${concatStrings (map (tag: ", ${tag}") plugin.tags)}
+            ''
+          }
+        '') zplugPlugins)}
+      ''}
+      if ! zplug check; then
+        zplug install
+      fi
+
+      [[ -z $FIG_PTY ]] && zplug load
+    '';
+
     profileExtra = ''
       [ -z "$\{SUDO_COMMAND// }" ] && [ --s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
 
@@ -55,14 +83,6 @@ in {
       enable = true;
 
       plugins = [ "git" "node" ];
-    };
-
-    zplug = {
-      enable = true;
-      plugins = [{
-        name = "romkatv/powerlevel10k";
-        tags = [ "as:theme" "depth:1" ];
-      }];
     };
   };
 }
