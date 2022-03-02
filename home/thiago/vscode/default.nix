@@ -31,9 +31,10 @@ in {
 
     userSettings = {
       "editor.tabSize" = 2;
-      "explorer.confirmDragAndDrop" = false;
       "editor.minimap.enabled" = false;
       "editor.multiCursorModifier" = "alt";
+      "explorer.confirmDragAndDrop" = false;
+      "extensions.autoUpdate" = false;
       "files.associations" = {
         "*.hs" = "haskell";
         "*.cjs" = "javascript";
