@@ -16,7 +16,6 @@ in {
         bbenoist.nix
         bradlc.vscode-tailwindcss
         brettm12345.nixfmt-vscode
-        dbaeumer.vscode-eslint
         eamodio.gitlens
         esbenp.prettier-vscode
         github.github-vscode-theme
