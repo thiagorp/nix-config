@@ -10,23 +10,7 @@ in {
 
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-extensions;
-      [
-        arrterian.nix-env-selector
-        bbenoist.nix
-        bradlc.vscode-tailwindcss
-        brettm12345.nixfmt-vscode
-        eamodio.gitlens
-        esbenp.prettier-vscode
-        github.github-vscode-theme
-        graphql.vscode-graphql
-        haskell.haskell
-        hookyqr.beautify
-        jpoissonnier.vscode-styled-components
-        justusadam.language-haskell
-        mechatroner.rainbow-csv
-        svelte.svelte-vscode
-      ] ++ extensionsFromVscodeMarketplace customExtensions;
+    extensions = extensionsFromVscodeMarketplace customExtensions;
 
     userSettings = {
       "editor.tabSize" = 2;
