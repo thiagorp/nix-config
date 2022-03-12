@@ -1,1 +1,1 @@
-[ (import ./netcdf.nix) (import ./python.nix) ]
+[ (import ./netcdf.nix) (import ./dbt.nix) ]

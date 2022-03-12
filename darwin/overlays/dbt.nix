@@ -1,4 +1,6 @@
-final: prev: rec {
+final: prev:
+
+let
   dbt-python = prev.python39.override {
     packageOverrides = pFinal: pPrev: {
       jinja2 = pPrev.jinja2.overridePythonAttrs (old: rec {
@@ -202,5 +204,6 @@ final: prev: rec {
     };
   };
 
+in rec {
   dbt = dbt-python.withPackages (ps: with ps; [ dbt-core dbt-snowflake ]);
 }
