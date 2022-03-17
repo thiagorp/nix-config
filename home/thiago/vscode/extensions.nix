@@ -56,14 +56,14 @@
   {
     name = "vscode-pull-request-github";
     publisher = "GitHub";
-    version = "0.39.2022031015";
-    sha256 = "0y9d9h1d162k8kfq5cj0qrngsf92pr4149l6hiv7yx74h8ixlgwg";
+    version = "0.39.2022031709";
+    sha256 = "0wd31fa02pp8jyl2d2q1y3sbd7k9jrwm0ivsz82z41xrv524if1p";
   }
   {
     name = "vscode-graphql";
     publisher = "GraphQL";
-    version = "0.3.50";
-    sha256 = "1yf6v2vsgmq86ysb6vxzbg2gh6vz03fsz0d0rhpvpghayrjlk5az";
+    version = "0.3.52";
+    sha256 = "0sd98rkwgc8zl54y0y80w7a563wb50ydgjx2iach25r4qvksx0y3";
   }
   {
     name = "terraform";
@@ -92,8 +92,8 @@
   {
     name = "language-haskell";
     publisher = "justusadam";
-    version = "3.4.0";
-    sha256 = "0ab7m5jzxakjxaiwmg0jcck53vnn183589bbxh3iiylkpicrv67y";
+    version = "3.6.0";
+    sha256 = "115y86w6n2bi33g1xh6ipz92jz5797d3d00mr4k8dv5fz76d35dd";
   }
   {
     name = "rainbow-csv";
@@ -104,20 +104,20 @@
   {
     name = "python";
     publisher = "ms-python";
-    version = "2022.3.10701002";
-    sha256 = "073ha9d5rcfln72mk6dyi4y5x57ml4gviy87l1n3bividrvxrzlc";
+    version = "2022.3.10741003";
+    sha256 = "1j8ln8w712iv3h8in70qzk0pmwz935bj76zxlsxs91cw6w3pi7p2";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2022.3.1";
-    sha256 = "1x4m1617391sy7f4zcf3axn26r5kz5xg0fshy0shpdwgxi1557pd";
+    version = "2022.3.2";
+    sha256 = "0nms1bcnnsdy86zg10scp4i8qhm25v1535xqv56pmhnxrrccdzs0";
   }
   {
     name = "jupyter";
     publisher = "ms-toolsai";
-    version = "2022.3.1000721005";
-    sha256 = "1lkw77fgf3qn8fgpiidrqn2a9nrw7pnfv7x6ic3w8j56cm00mrwn";
+    version = "2022.3.1000781005";
+    sha256 = "13cm87zf2lcmxsjlz4f5wygv4mh8smjyq1kd00jhj2xfmkxf725k";
   }
   {
     name = "jupyter-keymap";
@@ -140,7 +140,7 @@
   {
     name = "svelte-vscode";
     publisher = "svelte";
-    version = "105.12.1";
-    sha256 = "0w2qpg5v0hxdb8v20lhbnn2mkrin2p02pia6hi3kxzxz5df7gghq";
+    version = "105.13.0";
+    sha256 = "1hb44nigif4013k0ika5rpn8jq3hymrqflk1lwdiym3jjcgziwpv";
   }
 ]
