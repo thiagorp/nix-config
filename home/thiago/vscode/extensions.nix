@@ -38,8 +38,8 @@
   {
     name = "gitlens";
     publisher = "eamodio";
-    version = "12.0.4";
-    sha256 = "1s1wrrp5i7cqm8c4x67c9b19mf1sjpcxklyl58rfsnmjbrlnazsg";
+    version = "12.0.5";
+    sha256 = "0zfawv9nn88x8m30h7ryax0c7p68najl23a51r88a70hqppzxshw";
   }
   {
     name = "prettier-vscode";
@@ -68,8 +68,8 @@
   {
     name = "terraform";
     publisher = "hashicorp";
-    version = "2.20.0";
-    sha256 = "ezMIX7m03y0dhoRLt7xs3zzif2LST3RVQmuUyBKh85s=";
+    version = "2.20.1";
+    sha256 = "sha256-nFRKQsDLlS0/Vmf2tn7IyiIDURUhaXVeYxGKW3w1weo=";
   }
   {
     name = "haskell";
@@ -104,8 +104,8 @@
   {
     name = "python";
     publisher = "ms-python";
-    version = "2022.3.10741003";
-    sha256 = "1j8ln8w712iv3h8in70qzk0pmwz935bj76zxlsxs91cw6w3pi7p2";
+    version = "2022.3.10771003";
+    sha256 = "0pfj8mhz15jajby4zvb60b1ph330v7scg5w1ywi4s5xcvcj0x0y7";
   }
   {
     name = "vscode-pylance";
@@ -116,8 +116,8 @@
   {
     name = "jupyter";
     publisher = "ms-toolsai";
-    version = "2022.3.1000781005";
-    sha256 = "13cm87zf2lcmxsjlz4f5wygv4mh8smjyq1kd00jhj2xfmkxf725k";
+    version = "2022.3.1000791004";
+    sha256 = "175c5kvndpjfhkshf1g8n0smilclnhhnvz57lpvffalml40pwq09";
   }
   {
     name = "jupyter-keymap";
