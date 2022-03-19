@@ -26,7 +26,6 @@ let
         buildInputs = [ final.libffi ];
         propagatedBuildInputs = with pFinal; [ pycparser ];
       };
-
       oscrypto =
         pPrev.oscrypto.overridePythonAttrs (old: rec { doCheck = false; });
 
@@ -55,17 +54,17 @@ let
 
       dbt-extractor = pPrev.buildPythonPackage rec {
         pname = "dbt-extractor";
-        version = "0.4.0";
+        version = "0.4.1";
         src = pPrev.fetchPypi {
           inherit version;
           pname = "dbt_extractor";
           sha256 =
-            "58672e36fab988c849a693405920ee18421f27245c48e5f9ecf496369ed31a85";
+            "75b1c665699ec0f1ffce1ba3d776f7dfce802156f22e70a7b9c8f0b4d7e80f42";
         };
         cargoDeps = final.rustPlatform.fetchCargoTarball {
           inherit src;
           name = "${pname}-${version}";
-          hash = "sha256-UbfjQiyivKl6iTY6QvF3LmXWovxPoV5k4Cr8fx115S0=";
+          hash = "sha256-rNvD7qmy/TJMC2sIBC9F/YNUsyLNvrK1hm0p8duuVLs=";
         };
         format = "pyproject";
         propagatedBuildInputs = [ final.libiconv ];
@@ -74,6 +73,32 @@ let
           maturinBuildHook
         ];
       };
+
+      cryptography_vectors = pPrev.cryptography_vectors.overridePythonAttrs
+        (old: rec {
+          pname = "cryptography_vectors";
+          version = "3.4.8";
+          src = pPrev.fetchPypi {
+            inherit pname version;
+            sha256 = "sha256-TIRBAleZPT3gWLRLd3pJ4doq416+opcKNgx+OqD1gPI=";
+          };
+        });
+
+      cryptography = pPrev.cryptography.overridePythonAttrs (old: rec {
+        version = "3.4.8";
+        src = pPrev.fetchPypi {
+          inherit (old) pname;
+          inherit version;
+          sha256 =
+            "94cc5ed4ceaefcbe5bf38c8fba6a21fc1d365bb8fb826ea1688e3370b2e24a1c";
+        };
+        cargoDeps = final.rustPlatform.fetchCargoTarball {
+          inherit src;
+          sourceRoot = "${old.pname}-${version}/${old.cargoRoot}";
+          name = "${old.pname}-${version}";
+          sha256 = "sha256-9RxSRa8jzGgkHsvWzmHmZF2CaKjCGK5WlxsTamAIBQY=";
+        };
+      });
 
       hologram = pPrev.buildPythonPackage rec {
         pname = "hologram";
@@ -141,6 +166,17 @@ let
         propagatedBuildInputs = with pFinal; [ requests six ];
       };
 
+      typing-extensions = pPrev.buildPythonPackage rec {
+        pname = "typing-extensions";
+        version = "3.10.0.2";
+        src = pPrev.fetchPypi {
+          inherit version;
+          pname = "typing_extensions";
+          sha256 =
+            "49f75d16ff11f1cd258e1b988ccff82a3ca5570217d7ad8c5f48205dd99a677e";
+        };
+      };
+
       requests = pPrev.buildPythonPackage rec {
         pname = "requests";
         version = "2.27.1";
@@ -169,18 +205,18 @@ let
               "a263274d6af430edfe33cf57b44c7eba58a73017ec8b1c82cb30b25e42be9a1c";
           };
           propagatedBuildInputs =
-            [ dbt-core requests snowflake-connector-python ];
+            [ cryptography dbt-core requests snowflake-connector-python ];
           doCheck = false;
         };
 
       dbt-core = with pFinal;
         pFinal.buildPythonPackage rec {
           pname = "dbt-core";
-          version = "1.0.3";
+          version = "1.0.4";
           src = pFinal.fetchPypi {
             inherit pname version;
             sha256 =
-              "cff4c5e83b5abb5aafbe098d52eeacff3c2288003b5f467c4170227cf887e545";
+              "e25cddcd210538133fd369816085179875d951b7b0af94be8c0966b85bf2b3be";
           };
           nativeBuildInputs = [ ];
           propagatedBuildInputs = with pFinal; [

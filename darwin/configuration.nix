@@ -43,6 +43,8 @@
   programs = { zsh = { enable = true; }; };
 
   nix = {
+    version = "2.7.0";
+    extraOptions = "experimental-features = nix-command";
     trustedUsers = [ "root" "thiago" "mercury" "nixbld" ];
     binaryCachePublicKeys =
       [ "cache.mercury.com:yhfFlgvqtv0cAxzflJ0aZW3mbulx4+5EOZm6k3oML+I=" ];
