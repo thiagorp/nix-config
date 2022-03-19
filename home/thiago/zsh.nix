@@ -11,6 +11,8 @@ let
   sourceLines = map (file: "source ${file}") [ ./zsh/p10k.zsh ./zsh/git.zsh ];
 
 in {
+  home.packages = [ pkgs.zplug ];
+
   programs.zsh = {
     enable = true;
 
