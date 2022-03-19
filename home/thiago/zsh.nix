@@ -3,16 +3,13 @@
 with lib;
 
 let
-  extras = [ ./zsh/p10k.zsh ./zsh/git.zsh ];
-
-  extraInitExtra =
-    builtins.foldl' (soFar: new: soFar + "\n" + builtins.readFile new) ""
-    extras;
-
   zplugPlugins = [{
     name = "romkatv/powerlevel10k";
     tags = [ "as:theme" "depth:1" ];
   }];
+
+  sourceLines = map (file: "source ${file}") [ ./zsh/p10k.zsh ./zsh/git.zsh ];
+
 in {
   programs.zsh = {
     enable = true;
@@ -43,14 +40,17 @@ in {
     };
 
     initExtraFirst = ''
-      [ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+      export PATH="$PATH:$HOME/.local/bin"
+      eval "$(fig init zsh pre)"
     '';
 
     initExtra = ''
       test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
-      [ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
-    '' + extraInitExtra;
+      ${concatStringsSep "\n" sourceLines}
+
+      eval "$(fig init zsh post)"
+    '';
 
     # Can't use the native zsh implementation because we can't init zplug if we're in a fig terminal
     # See https://github.com/withfig/fig/issues/920
@@ -71,12 +71,6 @@ in {
       fi
 
       [[ -z $FIG_PTY ]] && zplug load
-    '';
-
-    profileExtra = ''
-      [ -z "$\{SUDO_COMMAND// }" ] && [ --s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
-
-      [ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
     '';
 
     oh-my-zsh = {
