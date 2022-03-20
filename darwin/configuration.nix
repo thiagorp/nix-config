@@ -1,7 +1,7 @@
-{ config, pkgs, ... }:
+{ config, pkgs, home-manager, ... }:
 
 {
-  imports = [ <home-manager/nix-darwin> ./homebrew.nix ./postgresql.nix ];
+  imports = [ ./homebrew.nix ./postgresql.nix ];
 
   nixpkgs.overlays = import ./overlays;
 
@@ -43,8 +43,8 @@
   programs = { zsh = { enable = true; }; };
 
   nix = {
-    version = "2.7.0";
-    extraOptions = "experimental-features = nix-command";
+    package = pkgs.nix_2_6;
+    extraOptions = "experimental-features = nix-command flakes";
     trustedUsers = [ "root" "thiago" "mercury" "nixbld" ];
     binaryCachePublicKeys =
       [ "cache.mercury.com:yhfFlgvqtv0cAxzflJ0aZW3mbulx4+5EOZm6k3oML+I=" ];
@@ -65,6 +65,6 @@
   home-manager = {
     useUserPackages = true;
     verbose = true;
-    users.thiago = (import ../home/thiago);
+    users.thiago = import ../home/thiago;
   };
 }
