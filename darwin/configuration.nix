@@ -1,7 +1,7 @@
 { config, pkgs, home-manager, ... }:
 
 {
-  imports = [ ./homebrew.nix ./postgresql.nix ];
+  imports = [ home-manager.darwinModule ./homebrew.nix ./postgresql.nix ];
 
   nixpkgs.overlays = import ./overlays;
 

@@ -13,12 +13,12 @@
     };
   };
 
-  outputs = { self, darwin, nixpkgs, home-manager }: {
+  outputs = { self, darwin, nixpkgs, ... }@inputs: {
     darwinConfigurations = {
       "Cacos-Macbook-Pro" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        modules = [ ./darwin/configuration.nix home-manager.darwinModule ];
-        inputs = { inherit (home-manager.darwinModules) home-manager; };
+        modules = [ ./darwin/configuration.nix ];
+        specialArgs = inputs;
       };
     };
   };
