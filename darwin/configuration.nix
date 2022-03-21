@@ -44,7 +44,11 @@
 
   nix = {
     package = pkgs.nix_2_6;
-    extraOptions = "experimental-features = nix-command flakes";
+    extraOptions = ''
+      experimental-features = nix-command flakes
+      keep-outputs = true
+      keep-derivations = true
+    '';
     trustedUsers = [ "root" "thiago" "mercury" "nixbld" ];
     binaryCachePublicKeys =
       [ "cache.mercury.com:yhfFlgvqtv0cAxzflJ0aZW3mbulx4+5EOZm6k3oML+I=" ];
