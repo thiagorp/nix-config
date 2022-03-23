@@ -97,7 +97,7 @@ in {
       "workbench.colorTheme" = "GitHub Dark Default";
       "typescript.preferences.importModuleSpecifier" = "non-relative";
       "git.path" = "${pkgs.git}/bin/git";
+      "editor.inlineSuggest.enabled" = true;
     };
-
   };
 }
