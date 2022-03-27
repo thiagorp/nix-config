@@ -44,8 +44,8 @@
   {
     name = "prettier-vscode";
     publisher = "esbenp";
-    version = "9.3.0";
-    sha256 = "1w6whr6h5v7i16f3j1kahs02mk7w2jplr5rrnsjwyszvcy6hz644";
+    version = "9.4.0";
+    sha256 = "075anzdbp1q9qffivb5p6j1xqrl6vjqgnb3qxd0lrrbzfy3jilz1";
   }
   {
     name = "copilot";
@@ -62,8 +62,8 @@
   {
     name = "vscode-pull-request-github";
     publisher = "GitHub";
-    version = "0.39.2022032209";
-    sha256 = "0jkz9w9r2wlq47lidfpznbx5rb0i2a90hx9jkjz7cb89ia178pbn";
+    version = "0.39.2022032409";
+    sha256 = "16jgzry9ph3xjqsrs7s0gymb1vhqb8a4v2hda5b782ry5qyrsj6f";
   }
   {
     name = "vscode-graphql";
@@ -104,26 +104,26 @@
   {
     name = "rainbow-csv";
     publisher = "mechatroner";
-    version = "2.1.0";
-    sha256 = "1kdnrrpi8ysd2m3nga7xv3hyqv0wbjlbmwn2a1gns6dc31y2lqf6";
+    version = "2.2.0";
+    sha256 = "0z5icnhp45spmpgjvz7icrcig2r8dzww3msr6a9danapwj6cvcvz";
   }
   {
     name = "python";
     publisher = "ms-python";
-    version = "2022.3.10811002";
-    sha256 = "0fmfm2w7xam1jfgrm4nxaiq0w8qwyx51gmw1yd4xfnvh2vdrli1a";
+    version = "2022.3.10841003";
+    sha256 = "16s86psyxc0389kx027x5isw4b46gisw9b0cx3ffjlaq1gd50m4r";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2022.3.2";
-    sha256 = "0nms1bcnnsdy86zg10scp4i8qhm25v1535xqv56pmhnxrrccdzs0";
+    version = "2022.3.3";
+    sha256 = "1khfw0xad9ijv8jv50c6qjshr3c30j9i6nmm8v6wxlg8h9s2xjp3";
   }
   {
     name = "jupyter";
     publisher = "ms-toolsai";
-    version = "2022.3.1000831004";
-    sha256 = "10i3gwyq6m2p5fn5jgdjgira70pz7f382j6sxzc1krvcqq300nq0";
+    version = "2022.3.1000861819";
+    sha256 = "00cy6x313cjkk93m9482shczrmvgzhm01zz2fsjdl8gk9cysany6";
   }
   {
     name = "jupyter-keymap";
