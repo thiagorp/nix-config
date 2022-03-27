@@ -91,6 +91,12 @@ in {
       "typescript.preferences.importModuleSpecifier" = "non-relative";
       "git.path" = "${pkgs.git}/bin/git";
       "editor.inlineSuggest.enabled" = true;
+      "github.copilot.enable" = {
+        "*" = true;
+        "yaml" = false;
+        "plaintext" = true;
+        "markdown" = false;
+      };
     };
   };
 }
