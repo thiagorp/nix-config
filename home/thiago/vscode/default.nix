@@ -22,20 +22,15 @@ in {
         "*.hs" = "haskell";
         "*.cjs" = "javascript";
       };
-      "gitlens.views.compare.files.layout" = "list";
       "git.enableSmartCommit" = true;
       "[json]" = {
         "editor.defaultFormatter" = "vscode.json-language-features";
       };
       "diffEditor.ignoreTrimWhitespace" = false;
-      "terminal.integrated.rendererType" = "dom";
       "[html]" = { "editor.defaultFormatter" = "esbenp.prettier-vscode"; };
       "editor.formatOnSave" = true;
       "[jsonc]" = { "editor.defaultFormatter" = "esbenp.prettier-vscode"; };
       "gitlens.codeLens.enabled" = false;
-      "tslint.configFile" = "tslint.json";
-      "tslint.packageManager" = "yarn";
-      "debug.node.autoAttach" = "on";
       "prettier.singleQuote" = true;
       "[javascript]" = {
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
@@ -85,8 +80,6 @@ in {
       "javascript.preferences.importModuleSpecifierEnding" = "minimal";
       "haskell.formattingProvider" = "fourmolu";
       "files.exclude" = { "**/.stack-work" = true; };
-      "pgFormatter.keywordCase" = "lowercase";
-      "pgFormatter.functionCase" = "lowercase";
       "[haskell]" = { "editor.defaultFormatter" = "haskell.haskell"; };
       "[svelte]" = { "editor.defaultFormatter" = "esbenp.prettier-vscode"; };
       "terminal.integrated.env.osx" = { "FIG_NEW_SESSION" = "1"; };
