@@ -44,14 +44,14 @@
   {
     name = "prettier-vscode";
     publisher = "esbenp";
-    version = "9.4.0";
-    sha256 = "075anzdbp1q9qffivb5p6j1xqrl6vjqgnb3qxd0lrrbzfy3jilz1";
+    version = "9.5.0";
+    sha256 = "0h5g746ij36h22v1y2883bqaphds7h1ck8mg8bywn9r723mxdy1g";
   }
   {
     name = "copilot";
     publisher = "GitHub";
-    version = "1.9.5350";
-    sha256 = "0mmb2p5mq7qr1x8g90qxpvrxdl4f1iayyy83yildn7vx64qcn1sg";
+    version = "1.10.5413";
+    sha256 = "0x610cc8b3avi0rr8zppavbhqba0mkg7yz7zzln7il9g58ynjy9s";
   }
   {
     name = "github-vscode-theme";
@@ -62,20 +62,20 @@
   {
     name = "vscode-pull-request-github";
     publisher = "GitHub";
-    version = "0.39.2022032409";
-    sha256 = "16jgzry9ph3xjqsrs7s0gymb1vhqb8a4v2hda5b782ry5qyrsj6f";
+    version = "0.41.2022033109";
+    sha256 = "02iqf7pm2ldfw9xwlibl97nywyfkmnvj26y2s9jia1hvhwb6s7ql";
   }
   {
     name = "vscode-graphql";
     publisher = "GraphQL";
-    version = "0.3.52";
-    sha256 = "0sd98rkwgc8zl54y0y80w7a563wb50ydgjx2iach25r4qvksx0y3";
+    version = "0.3.53";
+    sha256 = "0hyn8kj67nw4xbfb72ys5508ii5scbbis6jifxxk04j6f40ysj6c";
   }
   {
     name = "terraform";
     publisher = "hashicorp";
     version = "2.21.0";
-    sha256 = "sha256-mMhT0vW1MGq6WR1/lKQNSkCY2BlK9wM+NzxrnQEWXE4=";
+    sha256 = "mMhT0vW1MGq6WR1/lKQNSkCY2BlK9wM+NzxrnQEWXE4=";
   }
   {
     name = "haskell";
@@ -110,20 +110,20 @@
   {
     name = "python";
     publisher = "ms-python";
-    version = "2022.3.10841003";
-    sha256 = "16s86psyxc0389kx027x5isw4b46gisw9b0cx3ffjlaq1gd50m4r";
+    version = "2022.5.10901002";
+    sha256 = "0mp5w2abx51szbsd769asbxhnxiv9qhvsjyfbd50pc0k7xjwipwn";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2022.3.3";
-    sha256 = "1khfw0xad9ijv8jv50c6qjshr3c30j9i6nmm8v6wxlg8h9s2xjp3";
+    version = "2022.3.4";
+    sha256 = "0r1rgbw7kp5k5d1jvkcf0pwj8cwxyhg7hcsc3lf2nghxywzh065i";
   }
   {
     name = "jupyter";
     publisher = "ms-toolsai";
-    version = "2022.3.1000861819";
-    sha256 = "00cy6x313cjkk93m9482shczrmvgzhm01zz2fsjdl8gk9cysany6";
+    version = "2022.4.1000912146";
+    sha256 = "11404ravwy04jadr72i7xiy81j5ql2qzza9ff6j1pw46nnybhk5x";
   }
   {
     name = "jupyter-keymap";
