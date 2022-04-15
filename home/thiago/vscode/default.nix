@@ -97,6 +97,7 @@ in {
         "plaintext" = true;
         "markdown" = false;
       };
+      "haskell.manageHLS" = "PATH";
     };
   };
 }
