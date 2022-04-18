@@ -50,9 +50,12 @@
       keep-derivations = true
     '';
     trustedUsers = [ "root" "thiago" "mercury" "nixbld" ];
-    binaryCachePublicKeys =
-      [ "cache.mercury.com:yhfFlgvqtv0cAxzflJ0aZW3mbulx4+5EOZm6k3oML+I=" ];
-    trustedBinaryCaches = [ "https://cache.mercury.com" ];
+    binaryCachePublicKeys = [
+      "cache.mercury.com:yhfFlgvqtv0cAxzflJ0aZW3mbulx4+5EOZm6k3oML+I="
+      "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
+    ];
+    trustedBinaryCaches =
+      [ "https://cache.mercury.com" "https://hydra.iohk.io" ];
   };
 
   networking.computerName = "Caco MacBook Pro";
