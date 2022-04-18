@@ -18,6 +18,12 @@
     sha256 = "0zd0n9f5z1f0ckzfjr38xw2zzmcxg1gjrava7yahg5cvdcw6l35b";
   }
   {
+    name = "language-yesod";
+    publisher = "BIGMOON";
+    version = "0.9.0";
+    sha256 = "1vp3cw29m5k661i1b213m7n1gja531r901h4iwnvpykd9i66rfzg";
+  }
+  {
     name = "vscode-tailwindcss";
     publisher = "bradlc";
     version = "0.8.1";
