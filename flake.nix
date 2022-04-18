@@ -20,6 +20,10 @@
         modules = [ ./darwin/configuration.nix ];
         specialArgs = inputs;
       };
+
     };
+
+    devShell.aarch64-darwin = with nixpkgs.legacyPackages.aarch64-darwin;
+      mkShell { packages = [ nixfmt ]; };
   };
 }
