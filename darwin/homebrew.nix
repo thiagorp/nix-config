@@ -1,8 +1,6 @@
-{ ... }:
-
-{
+{...}: {
   homebrew = {
     enable = true;
-    casks = [ "fig" ];
+    casks = ["fig"];
   };
 }

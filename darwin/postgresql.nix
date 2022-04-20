@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
-let
+{
+  config,
+  pkgs,
+  ...
+}: let
   package = pkgs.postgresql_14;
   logsDir = "/usr/local/var/log";
 in {
@@ -9,7 +11,7 @@ in {
 
     package = package;
     dataDir = "/usr/local/var/postgres";
-    extraPlugins = [ package.pkgs.postgis ];
+    extraPlugins = [package.pkgs.postgis];
     extraConfig = ''
       timezone = 'UTC'
     '';

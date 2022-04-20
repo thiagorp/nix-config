@@ -1,6 +1,4 @@
-{ ... }:
-
-{
+{...}: {
   programs.neovim = {
     enable = true;
     vimAlias = true;
@@ -31,9 +29,9 @@
         "languageserver" = {
           "haskell" = {
             "command" = "haskell-language-server-wrapper";
-            "args" = [ "--lsp" ];
+            "args" = ["--lsp"];
             "initializationOptions" = {
-              "languageServerHaskell" = { "formattingProvider" = "fourmolu"; };
+              "languageServerHaskell" = {"formattingProvider" = "fourmolu";};
             };
             "rootPatterns" = [
               "*.cabal"
@@ -42,7 +40,7 @@
               "package.yaml"
               "hie.yaml"
             ];
-            "filetypes" = [ "haskell" "lhaskell" ];
+            "filetypes" = ["haskell" "lhaskell"];
           };
         };
       };

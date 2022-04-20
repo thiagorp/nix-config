@@ -1,24 +1,27 @@
-{ config, pkgs, home-manager, ... }:
-
 {
-  imports = [ home-manager.darwinModule ./homebrew.nix ./postgresql.nix ];
+  config,
+  pkgs,
+  home-manager,
+  ...
+}: {
+  imports = [home-manager.darwinModule ./homebrew.nix ./postgresql.nix];
 
   nixpkgs.overlays = import ./overlays;
 
   environment = {
     # List packages installed in system profile. To search by name, run:
     # $ nix-env -qaP | grep wget
-    systemPackages = with pkgs; [ icu vim ];
+    systemPackages = with pkgs; [icu vim];
 
     # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
     darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
 
-    shells = [ pkgs.zsh ];
+    shells = [pkgs.zsh];
   };
 
-  services = { nix-daemon = { enable = true; }; };
+  services = {nix-daemon = {enable = true;};};
 
-  networking = { knownNetworkServices = [ "Wi-Fi" "Thunderbolt Bridge" ]; };
+  networking = {knownNetworkServices = ["Wi-Fi" "Thunderbolt Bridge"];};
 
   system = {
     stateVersion = 4;
@@ -34,13 +37,13 @@
         Clicking = true;
       };
 
-      dock = { autohide = true; };
+      dock = {autohide = true;};
 
-      finder = { AppleShowAllExtensions = true; };
+      finder = {AppleShowAllExtensions = true;};
     };
   };
 
-  programs = { zsh = { enable = true; }; };
+  programs = {zsh = {enable = true;};};
 
   nix = {
     package = pkgs.nix_2_6;
@@ -49,13 +52,12 @@
       keep-outputs = true
       keep-derivations = true
     '';
-    trustedUsers = [ "root" "thiago" "mercury" "nixbld" ];
+    trustedUsers = ["root" "thiago" "mercury" "nixbld"];
     binaryCachePublicKeys = [
       "cache.mercury.com:yhfFlgvqtv0cAxzflJ0aZW3mbulx4+5EOZm6k3oML+I="
       "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
     ];
-    trustedBinaryCaches =
-      [ "https://cache.mercury.com" "https://hydra.iohk.io" ];
+    trustedBinaryCaches = ["https://cache.mercury.com" "https://hydra.iohk.io"];
   };
 
   networking.computerName = "Caco MacBook Pro";

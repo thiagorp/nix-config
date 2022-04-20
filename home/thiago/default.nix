@@ -1,7 +1,5 @@
-{ pkgs, ... }:
-
-{
-  imports = [ ./direnv.nix ./git.nix ./nvim.nix ./ssh.nix ./vscode ./zsh.nix ];
+{pkgs, ...}: {
+  imports = [./direnv.nix ./git.nix ./nvim.nix ./ssh.nix ./vscode ./zsh.nix];
 
   nixpkgs.config.allowUnfree = true;
 
@@ -9,10 +7,10 @@
     username = "thiago";
     homeDirectory = "/Users/thiago";
 
-    packages = with pkgs; [ bat fzf jq nixpkgs-fmt tig watchman ];
+    packages = with pkgs; [bat fzf jq nixpkgs-fmt tig watchman];
 
     stateVersion = "22.05";
   };
 
-  programs.home-manager = { enable = true; };
+  programs.home-manager = {enable = true;};
 }

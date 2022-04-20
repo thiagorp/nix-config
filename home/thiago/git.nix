@@ -1,16 +1,14 @@
-{ ... }:
-
-{
+{...}: {
   programs.git = {
     enable = true;
 
     userName = "Thiago Rodrigues de Paula";
     userEmail = "thiago.rdp@gmail.com";
 
-    aliases = { co = "checkout"; };
+    aliases = {co = "checkout";};
 
-    extraConfig = { push = { default = "simple"; }; };
+    extraConfig = {push = {default = "simple";};};
 
-    ignores = [ "*.swp" "*.swo" ".DS_Store" ];
+    ignores = ["*.swp" "*.swo" ".DS_Store"];
   };
 }

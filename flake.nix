@@ -13,17 +13,21 @@
     };
   };
 
-  outputs = { self, darwin, nixpkgs, ... }@inputs: {
+  outputs = {
+    self,
+    darwin,
+    nixpkgs,
+    ...
+  } @ inputs: {
     darwinConfigurations = {
       "Cacos-Macbook-Pro" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        modules = [ ./darwin/configuration.nix ];
+        modules = [./darwin/configuration.nix];
         specialArgs = inputs;
       };
-
     };
 
     devShell.aarch64-darwin = with nixpkgs.legacyPackages.aarch64-darwin;
-      mkShell { packages = [ nixfmt ]; };
+      mkShell {packages = [alejandra];};
   };
 }

@@ -1,10 +1,7 @@
-{ pkgs, ... }:
-
-let
+{pkgs, ...}: let
   inherit (pkgs.vscode-utils) extensionsFromVscodeMarketplace;
 
   customExtensions = import ./extensions.nix;
-
 in {
   nixpkgs.config.allowUnfree = true;
 
@@ -27,9 +24,9 @@ in {
         "editor.defaultFormatter" = "vscode.json-language-features";
       };
       "diffEditor.ignoreTrimWhitespace" = false;
-      "[html]" = { "editor.defaultFormatter" = "esbenp.prettier-vscode"; };
+      "[html]" = {"editor.defaultFormatter" = "esbenp.prettier-vscode";};
       "editor.formatOnSave" = true;
-      "[jsonc]" = { "editor.defaultFormatter" = "esbenp.prettier-vscode"; };
+      "[jsonc]" = {"editor.defaultFormatter" = "esbenp.prettier-vscode";};
       "gitlens.codeLens.enabled" = false;
       "prettier.singleQuote" = true;
       "[javascript]" = {
@@ -44,8 +41,7 @@ in {
       "[typescriptreact]" = {
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
       };
-      "eslint.validate" =
-        [ "javascript" "javascriptreact" "typescript" "typescriptreact" ];
+      "eslint.validate" = ["javascript" "javascriptreact" "typescript" "typescriptreact"];
       "eslint.lintTask.enable" = true;
       "editor.codeActionsOnSave" = {
         "source.fixAll" = true;
@@ -54,13 +50,13 @@ in {
         "source.sortMembers" = true;
       };
       "javascript.updateImportsOnFileMove.enabled" = "always";
-      "[css]" = { "editor.defaultFormatter" = "esbenp.prettier-vscode"; };
-      "[scss]" = { "editor.defaultFormatter" = "esbenp.prettier-vscode"; };
+      "[css]" = {"editor.defaultFormatter" = "esbenp.prettier-vscode";};
+      "[scss]" = {"editor.defaultFormatter" = "esbenp.prettier-vscode";};
       "[yaml]" = {
         "editor.insertSpaces" = true;
         "editor.tabSize" = 2;
         "editor.autoIndent" = "keep";
-        "gitlens.codeLens.scopes" = [ "document" ];
+        "gitlens.codeLens.scopes" = ["document"];
         "editor.quickSuggestions" = {
           "other" = true;
           "comments" = false;
@@ -79,10 +75,10 @@ in {
       "typescript.preferences.importModuleSpecifierEnding" = "minimal";
       "javascript.preferences.importModuleSpecifierEnding" = "minimal";
       "haskell.formattingProvider" = "fourmolu";
-      "files.exclude" = { "**/.stack-work" = true; };
-      "[haskell]" = { "editor.defaultFormatter" = "haskell.haskell"; };
-      "[svelte]" = { "editor.defaultFormatter" = "esbenp.prettier-vscode"; };
-      "terminal.integrated.env.osx" = { "FIG_NEW_SESSION" = "1"; };
+      "files.exclude" = {"**/.stack-work" = true;};
+      "[haskell]" = {"editor.defaultFormatter" = "haskell.haskell";};
+      "[svelte]" = {"editor.defaultFormatter" = "esbenp.prettier-vscode";};
+      "terminal.integrated.env.osx" = {"FIG_NEW_SESSION" = "1";};
       "terminal.external.osxExec" = "iTerm2.app";
       "terminal.integrated.fontFamily" = "MesloLGS NF";
       "editor.accessibilitySupport" = "off";

@@ -1,17 +1,20 @@
-{ pkgs, config, lib, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
+with lib; let
+  zplugPlugins = [
+    {
+      name = "romkatv/powerlevel10k";
+      tags = ["as:theme" "depth:1"];
+    }
+  ];
 
-with lib;
-
-let
-  zplugPlugins = [{
-    name = "romkatv/powerlevel10k";
-    tags = [ "as:theme" "depth:1" ];
-  }];
-
-  sourceLines = map (file: "source ${file}") [ ./zsh/p10k.zsh ./zsh/git.zsh ];
-
+  sourceLines = map (file: "source ${file}") [./zsh/p10k.zsh ./zsh/git.zsh];
 in {
-  home.packages = [ pkgs.zplug ];
+  home.packages = [pkgs.zplug];
 
   programs.zsh = {
     enable = true;
@@ -59,14 +62,15 @@ in {
     initExtraBeforeCompInit = ''
       source ${pkgs.zplug}/init.zsh
       export ZPLUG_HOME=${config.home.homeDirectory}/.zplug
-      ${optionalString (zplugPlugins != [ ]) ''
+      ${optionalString (zplugPlugins != []) ''
         ${concatStrings (map (plugin: ''
-          zplug "${plugin.name}"${
-            optionalString (plugin.tags != [ ]) ''
-              ${concatStrings (map (tag: ", ${tag}") plugin.tags)}
-            ''
-          }
-        '') zplugPlugins)}
+            zplug "${plugin.name}"${
+              optionalString (plugin.tags != []) ''
+                ${concatStrings (map (tag: ", ${tag}") plugin.tags)}
+              ''
+            }
+          '')
+          zplugPlugins)}
       ''}
       if ! zplug check; then
         zplug install
@@ -78,7 +82,7 @@ in {
     oh-my-zsh = {
       enable = true;
 
-      plugins = [ "git" "node" ];
+      plugins = ["git" "node"];
     };
   };
 }
