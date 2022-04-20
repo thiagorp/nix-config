@@ -75,13 +75,13 @@
     name = "terraform";
     publisher = "hashicorp";
     version = "2.22.0";
-    sha256 = "sha256-NNCeIcdaw7SqjHlNooFPrdGa+1z1CnLZBfGxwCH0wH0=";
+    sha256 = "sha256-wCxQvoVNSG5df57+QOj2R3cJIgiNKLiZWFOpzOc8KFQ=";
   }
   {
     name = "haskell";
     publisher = "haskell";
-    version = "2.1.2";
-    sha256 = "0jk78cadi0fx2bjm7pfw24gqpyzs2jj32zml99a6zkpjljvs2hvw";
+    version = "2.1.3";
+    sha256 = "071w5abccqad4j2lyfvr7z8fqv16m21219xffda50fygan5pqr9r";
   }
   {
     name = "beautify";
@@ -116,8 +116,8 @@
   {
     name = "python";
     publisher = "ms-python";
-    version = "2022.5.11091652";
-    sha256 = "08dsqycsfjhr2991ixgn7f700h1hdrdm9wp196qlv0zby47yars2";
+    version = "2022.5.11101004";
+    sha256 = "1s90cpb7pp86lyl6x6l1nwfc2yvxk4mgwkvbycdayk0bmf6r1bjz";
   }
   {
     name = "vscode-pylance";
@@ -128,8 +128,8 @@
   {
     name = "jupyter";
     publisher = "ms-toolsai";
-    version = "2022.4.1001111723";
-    sha256 = "1sprl20f501d9maj60ry51qb9bhs466v88dffszcij3mlnfpg4gm";
+    version = "2022.4.1001121005";
+    sha256 = "081k1svc0b5l7j1xd2kwgh1ra21lywz7p9f59arxsbg4dvzlrdcm";
   }
   {
     name = "jupyter-keymap";
@@ -154,5 +154,11 @@
     publisher = "svelte";
     version = "105.16.0";
     sha256 = "18b2wdmj7h9507pzyf05a5k2ll2hiz22xsq2mpw0w4nm14j6v42n";
+  }
+  {
+    name = "haskell-spotlight";
+    publisher = "visortelle";
+    version = "0.0.3";
+    sha256 = "1n0z977pvf08nnq1hcqsix650dzv7b2m0v1brjqhbrhv1j6ccym4";
   }
 ]
