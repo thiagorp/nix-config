@@ -74,7 +74,6 @@ in {
       "typescript.inlayHints.variableTypes.enabled" = true;
       "typescript.preferences.importModuleSpecifierEnding" = "minimal";
       "javascript.preferences.importModuleSpecifierEnding" = "minimal";
-      "haskell.formattingProvider" = "fourmolu";
       "files.exclude" = {"**/.stack-work" = true;};
       "[haskell]" = {"editor.defaultFormatter" = "haskell.haskell";};
       "[svelte]" = {"editor.defaultFormatter" = "esbenp.prettier-vscode";};
@@ -88,12 +87,12 @@ in {
       "git.path" = "${pkgs.git}/bin/git";
       "editor.inlineSuggest.enabled" = true;
       "github.copilot.enable" = {
-        "*" = true;
-        "yaml" = false;
-        "plaintext" = true;
-        "markdown" = false;
+        "*" = false;
       };
-      "haskell.manageHLS" = "PATH";
+      "haskell" = {
+        "manageHLS" = "PATH";
+        "formattingProvider" = "fourmolu";
+      };
     };
   };
 }
