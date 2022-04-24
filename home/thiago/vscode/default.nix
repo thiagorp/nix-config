@@ -89,10 +89,8 @@ in {
       "github.copilot.enable" = {
         "*" = false;
       };
-      "haskell" = {
-        "manageHLS" = "PATH";
-        "formattingProvider" = "fourmolu";
-      };
+      "haskell.manageHLS" = "PATH";
+      "haskell.formattingProvider" = "fourmolu";
     };
   };
 }
