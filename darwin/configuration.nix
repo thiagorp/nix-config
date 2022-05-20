@@ -46,7 +46,7 @@
   programs = {zsh = {enable = true;};};
 
   nix = {
-    package = pkgs.nix_2_6;
+    package = pkgs.nixVersions.nix_2_8;
     extraOptions = ''
       experimental-features = nix-command flakes
       keep-outputs = true
