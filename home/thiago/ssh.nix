@@ -7,6 +7,12 @@
         AddKeysToAgent yes
         UseKeychain yes
         IdentityFile ~/.ssh/id_rsa
+
+      Host github.com
+        IgnoreUnknown UseKeychain
+        AddKeysToAgent yes
+        UseKeychain yes
+        IdentityFile ~/.ssh/github
     '';
   };
 }
