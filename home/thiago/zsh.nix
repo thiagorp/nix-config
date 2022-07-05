@@ -35,6 +35,7 @@ in {
       ARCHFLAGS = "-arch arm64";
       NVIM_TUI_ENABLE_TRUE_COLOR = 1;
       EDITOR = "nvim";
+      SSH_AUTH_SOCK = "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock";
     };
 
     shellAliases = {

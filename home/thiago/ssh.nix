@@ -2,17 +2,8 @@
   programs.ssh = {
     enable = true;
     extraConfig = ''
-      Host github.com
-        IgnoreUnknown UseKeychain
-        AddKeysToAgent yes
-        UseKeychain yes
-        IdentityFile ~/.ssh/github
-
       Host *
-        IgnoreUnknown UseKeychain
-        AddKeysToAgent yes
-        UseKeychain yes
-        IdentityFile ~/.ssh/id_rsa
+        IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
     '';
   };
 }
