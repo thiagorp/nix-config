@@ -1,11 +1,5 @@
 [
   {
-    name = "nix-env-selector";
-    publisher = "arrterian";
-    version = "1.0.9";
-    sha256 = "0kdfhkdkffr3cdxmj7llb9g3wqpm13ml75rpkwlg1y0pkxcnlk2f";
-  }
-  {
     name = "vscode-dbt";
     publisher = "bastienboutonnet";
     version = "0.5.1";
@@ -69,7 +63,7 @@
     name = "terraform";
     publisher = "hashicorp";
     version = "2.23.0";
-    sha256 = "sha256-ouqIPCtjMQ4nWnGUy2+1U9nXauU6Dn38h2j2s5Q6XNY=";
+    sha256 = "sha256-3v2hEf/cEd7NiXfk7eJbmmdyiQJ7bWl9TuaN+y5k+e0=";
   }
   {
     name = "haskell";
@@ -106,6 +100,12 @@
     publisher = "mechatroner";
     version = "2.4.0";
     sha256 = "0idl63rfn068zamyx5mw3524k3pb98gv32dfbrszxyrrx4kbh1fd";
+  }
+  {
+    name = "direnv";
+    publisher = "mkhl";
+    version = "0.6.1";
+    sha256 = "1d60hqww1innch277yd3va2snpsp19c7w4v0rxz2jvzvgykfmx77";
   }
   {
     name = "python";
