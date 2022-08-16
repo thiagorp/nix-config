@@ -53,6 +53,8 @@ in {
     initExtra = ''
       test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
+      [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
       ${concatStringsSep "\n" sourceLines}
 
       eval "$(fig init zsh post)"
