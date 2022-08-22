@@ -47,20 +47,24 @@
 
   nix = {
     package = pkgs.nixVersions.stable;
+
     extraOptions = ''
       experimental-features = nix-command flakes
       keep-outputs = true
       keep-derivations = true
     '';
-    trustedUsers = ["root" "thiago" "mercury" "nixbld"];
-    binaryCachePublicKeys = [
-      "cache.mercury.com:yhfFlgvqtv0cAxzflJ0aZW3mbulx4+5EOZm6k3oML+I="
-      "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
-    ];
-    trustedBinaryCaches = [
-      "https://cache.mercury.com"
-      "https://hydra.iohk.io"
-    ];
+
+    settings = {
+      trusted-users = ["root" "thiago" "mercury" "nixbld"];
+      trusted-public-keys = [
+        "cache.mercury.com:yhfFlgvqtv0cAxzflJ0aZW3mbulx4+5EOZm6k3oML+I="
+        "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
+      ];
+      trusted-substituters = [
+        "https://cache.mercury.com"
+        "https://hydra.iohk.io"
+      ];
+    };
   };
 
   networking.computerName = "Caco MacBook Pro";
