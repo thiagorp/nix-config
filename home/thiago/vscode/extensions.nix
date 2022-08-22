@@ -38,8 +38,8 @@
   {
     name = "prettier-vscode";
     publisher = "esbenp";
-    version = "9.5.0";
-    sha256 = "0h5g746ij36h22v1y2883bqaphds7h1ck8mg8bywn9r723mxdy1g";
+    version = "9.8.0";
+    sha256 = "1rkjzmcvmjzd7l6bi05ymr1sibps3c6lzxhbmjp0zpzv02wl9jgv";
   }
   {
     name = "github-vscode-theme";
@@ -50,8 +50,8 @@
   {
     name = "vscode-pull-request-github";
     publisher = "GitHub";
-    version = "0.49.2022081609";
-    sha256 = "1qhlx8fw4l4j6lxwgpa8isd33rsj2l013rw51gfc36s5wcv2pici";
+    version = "0.49.2022082209";
+    sha256 = "1ky4y19hygdjssl8g58nfry5cjgxm81n1hl3dk13nixz61w7ia54";
   }
   {
     name = "vscode-graphql";
@@ -110,20 +110,20 @@
   {
     name = "python";
     publisher = "ms-python";
-    version = "2022.13.12281011";
-    sha256 = "1169y8x79k6ivga23m0c4sjshykcls8vvjknpd11mindw57ddx0s";
+    version = "2022.13.12341009";
+    sha256 = "0ln0pp5ddg0mw2wzy6gr1mqdbizfnpfzm2kabnv6nds71my6gca3";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2022.8.21";
-    sha256 = "1bq6c15fkcbk9lrs2iqlp6yb0r4ghnpgm79ajpjkz1ayajyy3fbj";
+    version = "2022.8.31";
+    sha256 = "0iiwvbpsg70xhjhvwf8ylvqfvimhibk8wwq8la8cwxx0nkvngfg4";
   }
   {
     name = "jupyter";
     publisher = "ms-toolsai";
-    version = "2022.8.1002301035";
-    sha256 = "0y29vpx20r8narz6avjgbyrhkrvdhzgfsvr2xjvlavn7cdlsbgz2";
+    version = "2022.8.1002361045";
+    sha256 = "1n3712bxgilj27wpxj1rfnicgzg312b07v8am40bqpd73yz0vrqc";
   }
   {
     name = "jupyter-keymap";
@@ -146,8 +146,8 @@
   {
     name = "svelte-vscode";
     publisher = "svelte";
-    version = "105.20.0";
-    sha256 = "1fz6wnzb2618wmmy663vhsynpmbkl1xk1k54738p74kfln00vxps";
+    version = "105.21.0";
+    sha256 = "12p6msv8wi773piqm1y5zik3ky652bdaw9s83ffwnlndsh87s9n5";
   }
   {
     name = "haskell-spotlight";
