@@ -32,8 +32,8 @@
   {
     name = "gitlens";
     publisher = "eamodio";
-    version = "12.1.2";
-    sha256 = "0wpmfrfpi6wl9v3dknx2qr2m74azpcw8bvhac21v67w6jxnl3jd9";
+    version = "2022.8.3105";
+    sha256 = "11axaxi06j0hb9xv35azqy4fys15pllg67gk3sqsc3s66q4qzk6w";
   }
   {
     name = "prettier-vscode";
@@ -50,20 +50,20 @@
   {
     name = "vscode-pull-request-github";
     publisher = "GitHub";
-    version = "0.49.2022082209";
-    sha256 = "1ky4y19hygdjssl8g58nfry5cjgxm81n1hl3dk13nixz61w7ia54";
+    version = "0.49.2022083109";
+    sha256 = "029q58klz5574va6wr3nqs70al37rzyl0xdd9y6ks5qa3d9xvj98";
   }
   {
     name = "vscode-graphql";
     publisher = "GraphQL";
-    version = "0.7.3";
-    sha256 = "0kq4scvs0wp1jf75gi7lf74l6cl3chgj1aw322qsj5ql01kcbh8j";
+    version = "0.7.4";
+    sha256 = "0kxc7srvsjmfiykzgp6v063f2cylp14wf56p34xw6cz0i9yml5qf";
   }
   {
     name = "terraform";
     publisher = "hashicorp";
-    version = "2.23.0";
-    sha256 = "sha256-3v2hEf/cEd7NiXfk7eJbmmdyiQJ7bWl9TuaN+y5k+e0=";
+    version = "2.24.1";
+    sha256 = "sha256-FHmwazPKzOhHG1UR0QyMHYTp898wYLYIwADohnap7ks=";
   }
   {
     name = "haskell";
@@ -110,20 +110,20 @@
   {
     name = "python";
     publisher = "ms-python";
-    version = "2022.13.12341009";
-    sha256 = "0ln0pp5ddg0mw2wzy6gr1mqdbizfnpfzm2kabnv6nds71my6gca3";
+    version = "2022.15.12431017";
+    sha256 = "0gkqxwfdn9n52pc76sn7vnrgm2w9yxynjxx7djyqhw7jzx2jp2nv";
   }
   {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2022.8.31";
-    sha256 = "0iiwvbpsg70xhjhvwf8ylvqfvimhibk8wwq8la8cwxx0nkvngfg4";
+    version = "2022.8.41";
+    sha256 = "1hamng01p6wn57x6ddkm9n7gab28ss6m2k6n0k68r6ly21kwsyiq";
   }
   {
     name = "jupyter";
     publisher = "ms-toolsai";
-    version = "2022.8.1002361045";
-    sha256 = "1n3712bxgilj27wpxj1rfnicgzg312b07v8am40bqpd73yz0vrqc";
+    version = "2022.9.1002451055";
+    sha256 = "198mdy56flhb4xk3w5cfmgy2qydchhwzs7qyyb0ww1cs5njs8dfb";
   }
   {
     name = "jupyter-keymap";
@@ -140,14 +140,14 @@
   {
     name = "jinjahtml";
     publisher = "samuelcolvin";
-    version = "0.17.0";
-    sha256 = "120z8barzgva0sr1g7xj4arpjz96v4zxh2zgk56jzdgnafzyq71b";
+    version = "0.18.0";
+    sha256 = "0f6w81g7jak6bywi2gfdnqvi0rl4h30f5lhxi6scxaqglhs0icp7";
   }
   {
     name = "svelte-vscode";
     publisher = "svelte";
-    version = "105.21.0";
-    sha256 = "12p6msv8wi773piqm1y5zik3ky652bdaw9s83ffwnlndsh87s9n5";
+    version = "105.22.1";
+    sha256 = "070m1hr8z4qm9x0pmvvnc58jjq1dx94vmasykp9fghij98gd5is6";
   }
   {
     name = "haskell-spotlight";
