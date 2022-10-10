@@ -62,8 +62,8 @@
   {
     name = "vscode-pull-request-github";
     publisher = "GitHub";
-    version = "0.51.2022092110";
-    sha256 = "1dx2j83kfnds7alrqn8cfrlpa478z73v94z4ljh45563z2lxqg5g";
+    version = "0.51.2022092209";
+    sha256 = "1g19qlnb8ffh932qk6sb5j1gcm6vl1i9j0c59k58g3ldsl3wj5i6";
   }
   {
     name = "vscode-graphql";
@@ -134,8 +134,8 @@
   {
     name = "jupyter";
     publisher = "ms-toolsai";
-    version = "2022.9.1002661205";
-    sha256 = "0x3651ljgzpy0c43l5zqvjk8pkya985s2flqszkzq2pb8n5r8pkd";
+    version = "2022.9.1002671058";
+    sha256 = "0qpf2kbwxwvc3qi0gfz4rl1gf69pai3a5g5mpdv5kxnnbx7lwx6g";
   }
   {
     name = "jupyter-keymap";
