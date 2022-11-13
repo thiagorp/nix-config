@@ -28,7 +28,7 @@ in {
       "editor.formatOnSave" = true;
       "[jsonc]" = {"editor.defaultFormatter" = "esbenp.prettier-vscode";};
       "gitlens.codeLens.enabled" = false;
-      "prettier.singleQuote" = true;
+      "prettier.requireConfig" = true;
       "[javascript]" = {
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
       };
