@@ -81,7 +81,7 @@
     name = "terraform";
     publisher = "hashicorp";
     version = "2.25.0";
-    sha256 = "0jvs25f95rwjdb3244ry3md3wgfvva0pb8ddmlbfv31zxpwzmyjk";
+    sha256 = "sha256-//zIVFofd9ttn0EMD84ey3sQcCgQGCXhavq2jvNQyGQ=";
   }
   {
     name = "haskell";

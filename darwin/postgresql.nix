@@ -12,9 +12,9 @@ in {
     package = package;
     dataDir = "/usr/local/var/postgres";
     extraPlugins = [package.pkgs.postgis];
-    extraConfig = ''
-      timezone = 'UTC'
-    '';
+    settings = {
+      timezone = "UTC";
+    };
   };
 
   launchd.user.agents.postgresql.serviceConfig = {
