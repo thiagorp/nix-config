@@ -96,12 +96,6 @@
     sha256 = "1d5b0p6r9ipwb7j4cx9w13vq31h78bh2sfwl54xri4gyvialhryd";
   }
   {
-    name = "vscode-dbt-power-user";
-    publisher = "innoverio";
-    version = "0.11.6";
-    sha256 = "0fwrxaj04jd4mxpj8fsmka8p97q2akgyrrwhmvqpzvi2291jzap2";
-  }
-  {
     name = "language-haskell";
     publisher = "justusadam";
     version = "3.6.0";
@@ -114,69 +108,15 @@
     sha256 = "1ncjzhrc27c3cwl2cblfjvfg23hdajasx8zkbnwx5wk6m2649s88";
   }
   {
-    name = "rainbow-csv";
-    publisher = "mechatroner";
-    version = "3.6.0";
-    sha256 = "1m3ddk9z48n69ksa9wv0amb2r08jcx1nd4050gjkfjm87sflrz3f";
-  }
-  {
     name = "direnv";
     publisher = "mkhl";
     version = "0.10.1";
     sha256 = "0m89sx1qqdkwa9pfmd9b11lp8z0dqpi6jn27js5q4ymscyg41bqd";
   }
   {
-    name = "python";
-    publisher = "ms-python";
-    version = "2023.7.10901017";
-    sha256 = "0398k841b237v524f0yz8jxd4zrpma19kcs8li2bvv30a2cjm5a9";
-  }
-  {
-    name = "vscode-pylance";
-    publisher = "ms-python";
-    version = "2023.3.41";
-    sha256 = "01av020hgza9n4hlgil9gxbw6j41jx3mfqwzw57spw336gccz65p";
-  }
-  {
-    name = "jupyter";
-    publisher = "ms-toolsai";
-    version = "2023.3.1000892223";
-    sha256 = "1dzgvxkx33i9dcpm08wpz7s5gh5y54mvfmrx8mgv5hfwrx9qgmcw";
-  }
-  {
-    name = "jupyter-keymap";
-    publisher = "ms-toolsai";
-    version = "1.1.0";
-    sha256 = "1i3qjvw5mmj53ysp0vgnjs48191raxkycbhp5gsrg229wr3yvc4j";
-  }
-  {
-    name = "jupyter-renderers";
-    publisher = "ms-toolsai";
-    version = "1.0.15";
-    sha256 = "101mjb5qapm8m4h46pxshvw43pfnzw4ii1ilm893nifigfx8y7i5";
-  }
-  {
-    name = "prisma";
-    publisher = "Prisma";
-    version = "4.12.0";
-    sha256 = "0r9kkzfxz81m6hfidfagja6wg70b48r0qr5z313yr32y7123mmcz";
-  }
-  {
     name = "jinjahtml";
     publisher = "samuelcolvin";
     version = "0.20.0";
     sha256 = "14xam64dfhcq3mckw2s9bg58miw1v2jqfg1ays6ksz8b17fcn060";
-  }
-  {
-    name = "svelte-vscode";
-    publisher = "svelte";
-    version = "107.2.5";
-    sha256 = "0m4s00ffpwj3q6b4c8sb8frh53z0z816m69601rqqf539wi4bii2";
-  }
-  {
-    name = "haskell-spotlight";
-    publisher = "visortelle";
-    version = "0.0.3";
-    sha256 = "1n0z977pvf08nnq1hcqsix650dzv7b2m0v1brjqhbrhv1j6ccym4";
   }
 ]
