@@ -92,6 +92,7 @@ in {
       "haskell.manageHLS" = "PATH";
       "haskell.formattingProvider" = "fourmolu";
       "terminal.integrated.shellIntegration.enabled" = false;
+      "editor.stickyScroll.enabled" = true;
     };
   };
 }
