@@ -14,6 +14,7 @@ in {
     extraPlugins = [package.pkgs.postgis];
     settings = {
       timezone = "UTC";
+      max_locks_per_transaction = 1024;
     };
 
     authentication = pkgs.lib.mkOverride 10 ''
