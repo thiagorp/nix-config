@@ -15,6 +15,7 @@ in {
     settings = {
       timezone = "UTC";
       max_locks_per_transaction = 1024;
+      max_connections = 1000;
     };
 
     authentication = pkgs.lib.mkOverride 10 ''
