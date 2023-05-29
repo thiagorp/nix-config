@@ -46,7 +46,6 @@ in {
       "editor.codeActionsOnSave" = {
         "source.fixAll" = true;
         "source.fixAll.eslint" = true;
-        "source.organizeImports" = true;
         "source.sortMembers" = true;
       };
       "javascript.updateImportsOnFileMove.enabled" = "always";
