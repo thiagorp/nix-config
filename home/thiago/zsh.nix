@@ -23,7 +23,7 @@ in {
 
     enableCompletion = true;
     enableAutosuggestions = true;
-    enableSyntaxHighlighting = true;
+    syntaxHighlighting.enable = true;
 
     dirHashes = {
       dl = "$HOME/Downloads";
@@ -63,7 +63,7 @@ in {
     # Can't use the native zsh implementation because we can't init zplug if we're in a fig terminal
     # See https://github.com/withfig/fig/issues/920
     initExtraBeforeCompInit = ''
-      source ${pkgs.zplug}/init.zsh
+      source ${pkgs.zplug}/share/zplug/init.zsh
       export ZPLUG_HOME=${config.home.homeDirectory}/.zplug
       ${optionalString (zplugPlugins != []) ''
         ${concatStrings (map (plugin: ''
