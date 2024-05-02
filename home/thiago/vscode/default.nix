@@ -44,9 +44,9 @@ in {
       "eslint.validate" = ["javascript" "javascriptreact" "typescript" "typescriptreact"];
       "eslint.lintTask.enable" = true;
       "editor.codeActionsOnSave" = {
-        "source.fixAll" = true;
-        "source.fixAll.eslint" = true;
-        "source.sortMembers" = true;
+        "source.fixAll" = "explicit";
+        "source.fixAll.eslint" = "explicit";
+        "source.sortMembers" = "explicit";
       };
       "javascript.updateImportsOnFileMove.enabled" = "always";
       "[css]" = {"editor.defaultFormatter" = "esbenp.prettier-vscode";};
@@ -92,6 +92,7 @@ in {
       "haskell.formattingProvider" = "fourmolu";
       "terminal.integrated.shellIntegration.enabled" = false;
       "editor.stickyScroll.enabled" = true;
+      "search.useGlobalIgnoreFiles" = true;
     };
   };
 }
