@@ -66,7 +66,7 @@
     "typescriptreact"
   ],
   "explorer.confirmDragAndDrop": false,
-  "extensions.autoUpdate": false,
+  "extensions.autoUpdate": "onlyEnabledExtensions",
   "files.associations": {
     "*.cjs": "javascript",
     "*.hs": "haskell"
@@ -76,6 +76,7 @@
   },
   "git.enableSmartCommit": true,
   "git.path": "/nix/store/1y3m89x5sl3bwag9lk4fdbqmswzjp9is-git-2.44.1/bin/git",
+  "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {
     "*": false
   },
@@ -104,6 +105,5 @@
   "typescript.inlayHints.variableTypes.enabled": true,
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifierEnding": "minimal",
-  "workbench.colorTheme": "GitHub Dark Default",
-  "github.copilot.editor.enableAutoCompletions": true
+  "workbench.colorTheme": "GitHub Dark Default"
 }
