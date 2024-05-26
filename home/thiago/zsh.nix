@@ -22,8 +22,11 @@ in {
     dotDir = ".config/zsh";
 
     enableCompletion = true;
-    enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
+
+    autosuggestion = {
+      enable = true;
+    };
 
     dirHashes = {
       dl = "$HOME/Downloads";
