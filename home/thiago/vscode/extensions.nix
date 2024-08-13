@@ -50,14 +50,14 @@
   {
     name = "copilot";
     publisher = "github";
-    version = "1.221.1043";
-    sha256 = "0455s6cy078fs4d2wrbzmalzxvx5psggc37s22s4v6wl4ida6v74";
+    version = "1.221.0";
+    sha256 = "sha256-Y9NlwgGmjf/i0g1f3u9ImSWzlcFR+KTdmddm+2n3oLY=";
   }
   {
     name = "copilot-chat";
     publisher = "github";
-    version = "0.20.2024081201";
-    sha256 = "1i084z01pm3vwbpwdv13yaj27vqlq038snpsx3qqppi6jfgm96pc";
+    version = "0.18.1";
+    sha256 = "sha256-BrcrfhkX2VGF9wznTSlPSdPPv126ScbHb1ngBRGtr4E=";
   }
   {
     name = "github-vscode-theme";
