@@ -7,6 +7,7 @@ in {
 
   programs.vscode = {
     enable = true;
+    mutableExtensionsDir = false;
     extensions = extensionsFromVscodeMarketplace customExtensions;
 
     userSettings = builtins.fromJSON (builtins.readFile ./settings.json);

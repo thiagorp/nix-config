@@ -90,11 +90,7 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "prettier.requireConfig": true,
   "search.useGlobalIgnoreFiles": true,
-  "svelte.enable-ts-plugin": true,
   "terminal.external.osxExec": "iTerm2.app",
-  "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1"
-  },
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "terminal.integrated.shellIntegration.enabled": false,
   "typescript.inlayHints.enumMemberValues.enabled": true,
