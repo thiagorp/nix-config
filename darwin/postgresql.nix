@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  package = pkgs.postgresql_14;
+  package = pkgs.postgresql_16;
   logsDir = "/usr/local/var/log";
 in {
   services.postgresql = {
