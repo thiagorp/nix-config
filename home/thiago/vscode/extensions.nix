@@ -14,8 +14,8 @@
   {
     name = "vscode-tailwindcss";
     publisher = "bradlc";
-    version = "0.13.28";
-    sha256 = "0g2wxanq9a77lkzi53cwhlviarxib7m777f7vd26s1yd1dkj35w0";
+    version = "0.13.41";
+    sha256 = "0qqpmvsxxknwc9ic3xp6j8x3aip22kjx9n5znlbsqbzkf5v1yarg";
   }
   {
     name = "vscode-css-modules";
@@ -32,32 +32,32 @@
   {
     name = "vscode-eslint";
     publisher = "dbaeumer";
-    version = "3.0.11";
-    sha256 = "0np0yzrqi8pv3ja0d5dsy9b4vrc7vqg6085yr34bcavsgksrrmms";
+    version = "3.0.13";
+    sha256 = "0yjrylvkw5q9w7kjigndm5m66qn8nranrm0m7qna8ggi0f2nz5cp";
   }
   {
     name = "gitlens";
     publisher = "eamodio";
-    version = "2024.8.1005";
-    sha256 = "1vbv04yfzmzk3mzc140ph4nc0ilwfirrxyj9svil5fry7y5m57d7";
+    version = "2024.9.2605";
+    sha256 = "00zvx7p0yykm7qsnnkfjsi3iinxmsnc6c5xmsp8lx0bgal3gisvj";
   }
   {
     name = "prettier-vscode";
     publisher = "esbenp";
-    version = "10.4.0";
-    sha256 = "1iy7i0yxnhizz40llnc1dk9q8kk98rz6ki830sq7zj3ak9qp9vzk";
+    version = "11.0.0";
+    sha256 = "1fcz8f4jgnf24kblf8m8nwgzd5pxs2gmrv235cpdgmqz38kf9n54";
   }
   {
     name = "copilot";
     publisher = "github";
-    version = "1.221.0";
-    sha256 = "sha256-Y9NlwgGmjf/i0g1f3u9ImSWzlcFR+KTdmddm+2n3oLY=";
+    version = "1.234.1126";
+    sha256 = "1520f41kl3r9lyc2w0q8zrnckszmkqf7awq3b0aqckpkwdi0wh49";
   }
   {
     name = "copilot-chat";
     publisher = "github";
-    version = "0.18.1";
-    sha256 = "sha256-BrcrfhkX2VGF9wznTSlPSdPPv126ScbHb1ngBRGtr4E=";
+    version = "0.21.2024092601";
+    sha256 = "0rqznhp06f80swvcp6q2g1br96ld03jd3a4fyz364sjjhnxv69fg";
   }
   {
     name = "github-vscode-theme";
@@ -68,20 +68,26 @@
   {
     name = "vscode-github-actions";
     publisher = "github";
-    version = "0.26.3";
-    sha256 = "17p4xjanmaphfx63s6cdji6b237n3ndkfzjjndsvk64imrh2jxdl";
+    version = "0.27.0";
+    sha256 = "0sk8cgnk4pyjxwfi3hr3qrajffvdncvq3xbjn73g3jz0ygakg7xi";
   }
   {
     name = "vscode-pull-request-github";
     publisher = "github";
-    version = "0.95.2024081204";
-    sha256 = "0g2mm1m8sm21dq4vavw546yglb9lm8dqbjmifwm4y2a38zpdiakf";
+    version = "0.97.2024092604";
+    sha256 = "12h9k0dcgn5g7wm08929z4lqi4p54na1xdapl1vb7a584cx3h6nm";
   }
   {
     name = "terraform";
     publisher = "hashicorp";
-    version = "2.33.2024080812";
-    sha256 = "0a5diypnjkyrlnh3qp552dy2vbggynnd053n6gag24z8sppgpnp2";
+    version = "2.33.2024090609";
+    sha256 = "0bqc0kvzig3bx61zv7xy07fqbxha9aw1pxbpzl40j582mhapr8qd";
+  }
+  {
+    name = "language-haskell";
+    publisher = "justusadam";
+    version = "3.6.0";
+    sha256 = "sha256-rZXRzPmu7IYmyRWANtpJp3wp0r/RwB7eGHEJa7hBvoQ=";
   }
   {
     name = "alejandra";
@@ -98,7 +104,7 @@
   {
     name = "makefile-tools";
     publisher = "ms-vscode";
-    version = "0.10.25";
-    sha256 = "1mlnl8j09lm1w3rfjxddxqczd58zx0d699rhc0i67filszixwy3y";
+    version = "0.12.2";
+    sha256 = "1mmqhqq5nc8m1yrbcz96787lrcy8iyxlwykyvrk4mcajwydnpyvm";
   }
 ]
