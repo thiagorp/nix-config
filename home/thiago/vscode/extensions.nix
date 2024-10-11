@@ -90,6 +90,12 @@
     sha256 = "sha256-rZXRzPmu7IYmyRWANtpJp3wp0r/RwB7eGHEJa7hBvoQ=";
   }
   {
+    name = "haskell";
+    publisher = "haskell";
+    version = "2.4.4";
+    sha256 = "sha256-O7tfZ1bQmlMgZGoWuECjSno6DLCO0+CCteRhT6PjZBY=";
+  }
+  {
     name = "alejandra";
     publisher = "kamadorueda";
     version = "1.0.0";
