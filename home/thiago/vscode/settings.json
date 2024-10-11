@@ -101,5 +101,6 @@
   "typescript.inlayHints.variableTypes.enabled": true,
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifierEnding": "minimal",
-  "workbench.colorTheme": "GitHub Dark Default"
+  "workbench.colorTheme": "GitHub Dark Default",
+  "githubPullRequests.terminalLinksHandler": "github"
 }
