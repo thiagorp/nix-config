@@ -14,8 +14,8 @@
   {
     name = "vscode-tailwindcss";
     publisher = "bradlc";
-    version = "0.13.41";
-    sha256 = "0qqpmvsxxknwc9ic3xp6j8x3aip22kjx9n5znlbsqbzkf5v1yarg";
+    version = "0.13.44";
+    sha256 = "1v6aqfzlgf3sgs554cznwq7nyj7fsbi2dv0wp85r3fii8gv9n90d";
   }
   {
     name = "vscode-css-modules";
@@ -38,8 +38,8 @@
   {
     name = "gitlens";
     publisher = "eamodio";
-    version = "2024.9.2605";
-    sha256 = "00zvx7p0yykm7qsnnkfjsi3iinxmsnc6c5xmsp8lx0bgal3gisvj";
+    version = "2024.10.1105";
+    sha256 = "1bihasjnx0f3r86ij96pyb7085p0hpg3wc9i5zifa320zbkydrd7";
   }
   {
     name = "prettier-vscode";
@@ -50,20 +50,20 @@
   {
     name = "copilot";
     publisher = "github";
-    version = "1.234.1126";
-    sha256 = "1520f41kl3r9lyc2w0q8zrnckszmkqf7awq3b0aqckpkwdi0wh49";
+    version = "1.238.0";
+    sha256 = "07kgcswa901r8k4svbq6l3dnhicq9kwam8ijz7m029057vqaqn7m";
   }
   {
     name = "copilot-chat";
     publisher = "github";
-    version = "0.21.2024092601";
-    sha256 = "0rqznhp06f80swvcp6q2g1br96ld03jd3a4fyz364sjjhnxv69fg";
+    version = "0.22.2024101101";
+    sha256 = "1izr9di4cx26dakyylynwkaa704lrqhmnmy8smdj6jrnykk52596";
   }
   {
     name = "github-vscode-theme";
     publisher = "github";
-    version = "6.3.4";
-    sha256 = "0csh0fai28jx32zdhlfvf9ml34760hq35q8g6slzvdzip03k9ci5";
+    version = "6.3.5";
+    sha256 = "0jj7bp5iadrm2h75pdn96z0wzygv0sfa93karvlqlwagh2hrvrkl";
   }
   {
     name = "vscode-github-actions";
@@ -74,8 +74,8 @@
   {
     name = "vscode-pull-request-github";
     publisher = "github";
-    version = "0.97.2024092604";
-    sha256 = "12h9k0dcgn5g7wm08929z4lqi4p54na1xdapl1vb7a584cx3h6nm";
+    version = "0.99.2024101004";
+    sha256 = "0h4rpcxy3yhiddydl5cfvx9zacj7pp5fick474h5awnnm55fy71p";
   }
   {
     name = "terraform";
@@ -84,16 +84,16 @@
     sha256 = "0bqc0kvzig3bx61zv7xy07fqbxha9aw1pxbpzl40j582mhapr8qd";
   }
   {
+    name = "haskell";
+    publisher = "haskell";
+    version = "2.5.3";
+    sha256 = "13s39fvb6kwxklcfsa5xh4z7y8y3y0h6jv39ljrgl24qkwgx8xnw";
+  }
+  {
     name = "language-haskell";
     publisher = "justusadam";
     version = "3.6.0";
-    sha256 = "sha256-rZXRzPmu7IYmyRWANtpJp3wp0r/RwB7eGHEJa7hBvoQ=";
-  }
-  {
-    name = "haskell";
-    publisher = "haskell";
-    version = "2.4.4";
-    sha256 = "sha256-O7tfZ1bQmlMgZGoWuECjSno6DLCO0+CCteRhT6PjZBY=";
+    sha256 = "115y86w6n2bi33g1xh6ipz92jz5797d3d00mr4k8dv5fz76d35dd";
   }
   {
     name = "alejandra";
@@ -110,7 +110,7 @@
   {
     name = "makefile-tools";
     publisher = "ms-vscode";
-    version = "0.12.2";
-    sha256 = "1mmqhqq5nc8m1yrbcz96787lrcy8iyxlwykyvrk4mcajwydnpyvm";
+    version = "0.12.4";
+    sha256 = "1kxhcnvv0jxavhqab38bnjc89sx4d8z9f504fimq8ibval41a9d0";
   }
 ]
