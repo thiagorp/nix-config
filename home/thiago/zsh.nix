@@ -45,7 +45,6 @@ in {
       drs = "darwin-rebuild switch --flake ~/.config/nixpkgs";
       gcb = "git checkout -b";
       gcm = "git checkout master";
-      update-nix = "${pkgs.vscode} $HOME/.config/nixpkgs/darwin";
     };
 
     initExtraFirst = ''
@@ -55,8 +54,6 @@ in {
 
     initExtra = ''
       test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
-
-      [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
       ${concatStringsSep "\n" sourceLines}
 
