@@ -14,8 +14,8 @@
   {
     name = "vscode-tailwindcss";
     publisher = "bradlc";
-    version = "0.13.44";
-    sha256 = "1v6aqfzlgf3sgs554cznwq7nyj7fsbi2dv0wp85r3fii8gv9n90d";
+    version = "0.13.46";
+    sha256 = "0x63w6666p3plzh2jwfyrk0b3dbcajjxsqhf7xzi6lhci6mx3dpi";
   }
   {
     name = "vscode-css-modules";
@@ -38,8 +38,8 @@
   {
     name = "gitlens";
     publisher = "eamodio";
-    version = "2024.10.1105";
-    sha256 = "1bihasjnx0f3r86ij96pyb7085p0hpg3wc9i5zifa320zbkydrd7";
+    version = "2024.11.205";
+    sha256 = "0j2dyzqiprpb1z3axb10p3sgpqd4gr91mrgh3napcgwz5wqczfjj";
   }
   {
     name = "prettier-vscode";
@@ -50,14 +50,14 @@
   {
     name = "copilot";
     publisher = "github";
-    version = "1.238.0";
-    sha256 = "07kgcswa901r8k4svbq6l3dnhicq9kwam8ijz7m029057vqaqn7m";
+    version = "1.243.1195";
+    sha256 = "15im0gdrnfas55f2m3g9dm98g9j8jg6xf70qyq9iqh7wbm0ilwl8";
   }
   {
     name = "copilot-chat";
     publisher = "github";
-    version = "0.22.2024101101";
-    sha256 = "1izr9di4cx26dakyylynwkaa704lrqhmnmy8smdj6jrnykk52596";
+    version = "0.23.2024110101";
+    sha256 = "sha256-DBo9O0GAQxDO44Dgj69f0d7lr+UtGrF1OPjABnQ5r/4=";
   }
   {
     name = "github-vscode-theme";
@@ -74,14 +74,14 @@
   {
     name = "vscode-pull-request-github";
     publisher = "github";
-    version = "0.99.2024101004";
-    sha256 = "0h4rpcxy3yhiddydl5cfvx9zacj7pp5fick474h5awnnm55fy71p";
+    version = "0.101.2024110404";
+    sha256 = "08hb6jqizq5da9cj1y460zcrgwbl3f66mc90x8a0n1sk45z3k3s0";
   }
   {
     name = "terraform";
     publisher = "hashicorp";
-    version = "2.33.2024090609";
-    sha256 = "0bqc0kvzig3bx61zv7xy07fqbxha9aw1pxbpzl40j582mhapr8qd";
+    version = "2.34.2024101517";
+    sha256 = "sha256-YjRzDYLCbl1mphQSiLEh7lLmcLv6QBPSzJpSaDwKA5I=";
   }
   {
     name = "haskell";
@@ -110,7 +110,7 @@
   {
     name = "makefile-tools";
     publisher = "ms-vscode";
-    version = "0.12.4";
-    sha256 = "1kxhcnvv0jxavhqab38bnjc89sx4d8z9f504fimq8ibval41a9d0";
+    version = "0.12.9";
+    sha256 = "036nqr3gv8xkhazm9xg4ksm8hndxz7l32lnl2s4d3rylrg3y2lmk";
   }
 ]
