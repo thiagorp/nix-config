@@ -1,0 +1,2 @@
+FATAL:  could not open directory "/run/current-system/sw/lib": No such file or directory
+HINT:  This may indicate an incomplete PostgreSQL installation, or that the file "/run/current-system/sw/bin/postgres" has been moved away from its proper location.
