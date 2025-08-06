@@ -20,7 +20,7 @@
     ...
   } @ inputs: {
     darwinConfigurations = {
-      "Cacos-Macbook-Pro" = darwin.lib.darwinSystem {
+      "Cacos-Macbook-Pro-2" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = [./darwin/configuration.nix];
         specialArgs = inputs;

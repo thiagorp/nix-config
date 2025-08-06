@@ -7,9 +7,14 @@ in {
 
   programs.vscode = {
     enable = false;
-    mutableExtensionsDir = false;
-    extensions = extensionsFromVscodeMarketplace customExtensions;
 
-    userSettings = builtins.fromJSON (builtins.readFile ./settings.json);
+    profiles = {
+      default = {
+        extensions = extensionsFromVscodeMarketplace customExtensions;
+        userSettings = builtins.fromJSON (builtins.readFile ./settings.json);
+      };
+    };
+
+    mutableExtensionsDir = false;
   };
 }

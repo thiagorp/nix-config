@@ -4,7 +4,9 @@
   home-manager,
   ...
 }: {
-  imports = [home-manager.darwinModule ./homebrew.nix ./postgresql.nix];
+  imports = [home-manager.darwinModules.home-manager ./homebrew.nix ./postgresql.nix];
+
+  ids.gids.nixbld = 350;
 
   nixpkgs.overlays = import ./overlays;
 
@@ -19,12 +21,11 @@
     shells = [pkgs.zsh];
   };
 
-  services = {nix-daemon = {enable = true;};};
-
   networking = {knownNetworkServices = ["Wi-Fi" "Thunderbolt Bridge"];};
 
   system = {
     stateVersion = 4;
+    primaryUser = "thiago";
 
     keyboard = {
       enableKeyMapping = true;
@@ -46,6 +47,8 @@
   programs = {zsh = {enable = true;};};
 
   nix = {
+    enable = true;
+
     package = pkgs.nixVersions.stable;
 
     extraOptions = ''
@@ -67,8 +70,8 @@
     };
   };
 
-  networking.computerName = "Caco MacBook Pro";
-  networking.hostName = "Cacos-Macbook-Pro";
+  networking.computerName = "Caco MacBook Pro 2";
+  networking.hostName = "Cacos-Macbook-Pro-2";
 
   users.users = {
     thiago = {
