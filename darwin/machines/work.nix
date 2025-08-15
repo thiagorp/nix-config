@@ -7,7 +7,7 @@
 
   # Work machine specific settings
   environment.systemPackages = with pkgs; [
-    # Work-specific tools
+    claude-code
   ];
 
   # Work machine services
