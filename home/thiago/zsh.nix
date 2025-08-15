@@ -42,7 +42,7 @@ in {
     };
 
     shellAliases = {
-      drs = "darwin-rebuild switch --flake ~/.config/nixpkgs";
+      drs = "sudo darwin-rebuild switch --flake ~/.config/nixpkgs";
       gcb = "git checkout -b";
       gcm = "git checkout master";
     };
@@ -50,15 +50,12 @@ in {
     initContent = let
       initExtraFirst = lib.mkBefore ''
         export PATH="$PATH:$HOME/.local/bin"
-        eval "$(fig init zsh pre)"
       '';
 
       initExtra = ''
         test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
         ${concatStringsSep "\n" sourceLines}
-
-        eval "$(fig init zsh post)"
       '';
 
       # Can't use the native zsh implementation because we can't init zplug if we're in a fig terminal
@@ -80,7 +77,7 @@ in {
           zplug install
         fi
 
-        [[ -z $FIG_PTY ]] && zplug load
+        zplug load
       '';
     in
       lib.mkMerge [initExtraFirst initExtra initExtraBeforeCompInit];

@@ -4,7 +4,7 @@
   home-manager,
   ...
 }: {
-  imports = [home-manager.darwinModules.home-manager ./homebrew.nix ./postgresql.nix];
+  imports = [home-manager.darwinModules.home-manager ./postgresql.nix];
 
   ids.gids.nixbld = 350;
 
@@ -24,7 +24,7 @@
   networking = {knownNetworkServices = ["Wi-Fi" "Thunderbolt Bridge"];};
 
   system = {
-    stateVersion = 4;
+    stateVersion = 6;
     primaryUser = "thiago";
 
     keyboard = {
@@ -56,22 +56,7 @@
       keep-outputs = true
       keep-derivations = true
     '';
-
-    settings = {
-      trusted-users = ["root" "thiago" "mercury" "nixbld"];
-      trusted-public-keys = [
-        "cache.mercury.com:yhfFlgvqtv0cAxzflJ0aZW3mbulx4+5EOZm6k3oML+I="
-        "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
-      ];
-      trusted-substituters = [
-        "https://cache.mercury.com"
-        "https://hydra.iohk.io"
-      ];
-    };
   };
-
-  networking.computerName = "Caco MacBook Pro 2";
-  networking.hostName = "Cacos-Macbook-Pro-2";
 
   users.users = {
     thiago = {
