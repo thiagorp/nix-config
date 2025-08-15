@@ -1,18 +1,20 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   networking.computerName = "Thiago's Work Computer";
-  
+
   # Work machine specific settings
   environment.systemPackages = with pkgs; [
     # Work-specific tools
   ];
-  
+
   # Work machine services
   services = {
     # Add work-specific services
   };
-  
+
   # Work-specific security settings
   security = {
     # Add work security requirements
@@ -30,4 +32,5 @@
         "https://hydra.iohk.io"
       ];
     };
+  };
 }
