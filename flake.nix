@@ -24,16 +24,19 @@
       "Thiagos-Work-Computer" = ./darwin/machines/work.nix;
     };
   in {
-    darwinConfigurations = builtins.mapAttrs (hostName: configFile:
-      darwin.lib.darwinSystem {
-        system = "aarch64-darwin";
-        modules = [
-          ./darwin/configuration.nix
-          configFile
-        ];
-        specialArgs = inputs // { inherit hostName; };
-      }
-    ) hosts;
+    darwinConfigurations =
+      builtins.mapAttrs (
+        hostName: configFile:
+          darwin.lib.darwinSystem {
+            system = "aarch64-darwin";
+            modules = [
+              ./darwin/configuration.nix
+              configFile
+            ];
+            specialArgs = inputs // {inherit hostName;};
+          }
+      )
+      hosts;
 
     devShell.aarch64-darwin = with nixpkgs.legacyPackages.aarch64-darwin;
       mkShell {packages = [alejandra];};
