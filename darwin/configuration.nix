@@ -14,7 +14,11 @@
   environment = {
     # List packages installed in system profile. To search by name, run:
     # $ nix-env -qaP | grep wget
-    systemPackages = with pkgs; [icu vim];
+    systemPackages = with pkgs; [
+      icu
+      vim
+      nerd-fonts.meslo-lg
+    ];
 
     # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
     darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";

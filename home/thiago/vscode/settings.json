@@ -91,7 +91,7 @@
   "prettier.requireConfig": true,
   "search.useGlobalIgnoreFiles": true,
   "terminal.external.osxExec": "iTerm2.app",
-  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
   "terminal.integrated.shellIntegration.enabled": false,
   "typescript.inlayHints.enumMemberValues.enabled": true,
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
