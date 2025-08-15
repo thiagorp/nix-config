@@ -48,8 +48,14 @@ in {
       initExtra = ''
         test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
-        # Initialize Oh My Posh with custom theme
-        eval "$(oh-my-posh init zsh --config ${./zsh/omp-theme.json})"
+        # Initialize Oh My Posh with appropriate theme based on environment
+        if [[ -n "$CURSOR_AGENT" ]]; then
+          # Use simple prompt for Cursor (no Oh My Posh)
+          source ${./zsh/cursor-simple.zsh}
+        else
+          # Use full theme for other terminals
+          eval "$(oh-my-posh init zsh --config ${./zsh/omp-theme.json})"
+        fi
 
         ${concatStringsSep "\n" sourceLines}
       '';
