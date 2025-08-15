@@ -5,16 +5,9 @@
   ...
 }:
 with lib; let
-  zplugPlugins = [
-    {
-      name = "romkatv/powerlevel10k";
-      tags = ["as:theme" "depth:1"];
-    }
-  ];
-
-  sourceLines = map (file: "source ${file}") [./zsh/p10k.zsh ./zsh/git.zsh];
+  sourceLines = map (file: "source ${file}") [./zsh/git.zsh];
 in {
-  home.packages = [pkgs.zplug];
+  home.packages = [pkgs.oh-my-posh];
 
   programs.zsh = {
     enable = true;
@@ -55,32 +48,13 @@ in {
       initExtra = ''
         test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
+        # Initialize Oh My Posh with custom theme
+        eval "$(oh-my-posh init zsh --config ${./zsh/omp-theme.json})"
+
         ${concatStringsSep "\n" sourceLines}
       '';
-
-      # Can't use the native zsh implementation because we can't init zplug if we're in a fig terminal
-      # See https://github.com/withfig/fig/issues/920
-      initExtraBeforeCompInit = lib.mkOrder 550 ''
-        source ${pkgs.zplug}/share/zplug/init.zsh
-        export ZPLUG_HOME=${config.home.homeDirectory}/.zplug
-        ${optionalString (zplugPlugins != []) ''
-          ${concatStrings (map (plugin: ''
-              zplug "${plugin.name}"${
-                optionalString (plugin.tags != []) ''
-                  ${concatStrings (map (tag: ", ${tag}") plugin.tags)}
-                ''
-              }
-            '')
-            zplugPlugins)}
-        ''}
-        if ! zplug check; then
-          zplug install
-        fi
-
-        zplug load
-      '';
     in
-      lib.mkMerge [initExtraFirst initExtra initExtraBeforeCompInit];
+      lib.mkMerge [initExtraFirst initExtra];
 
     oh-my-zsh = {
       enable = true;
