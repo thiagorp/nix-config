@@ -2,7 +2,6 @@
 
 {
   networking.computerName = "Thiago's Work Computer";
-  networking.hostName = "Thiagos-Work-Computer";
   
   # Work machine specific settings
   environment.systemPackages = with pkgs; [

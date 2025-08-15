@@ -2,6 +2,7 @@
   config,
   pkgs,
   home-manager,
+  hostName,
   ...
 }: {
   imports = [home-manager.darwinModules.home-manager ./postgresql.nix];
@@ -65,6 +66,8 @@
       shell = pkgs.zsh;
     };
   };
+
+  networking.hostName = hostName;
 
   home-manager = {
     useUserPackages = true;
