@@ -23,6 +23,11 @@
       "Cacos-Personal-Computer" = ./darwin/machines/personal.nix;
       "Thiagos-Work-Computer" = ./darwin/machines/work.nix;
     };
+
+    nfu = with nixpkgs.legacyPackages.aarch64-darwin;
+      writeShellScriptBin "nfu" ''
+        nix flake update
+      '';
   in {
     darwinConfigurations =
       builtins.mapAttrs (
@@ -39,6 +44,11 @@
       hosts;
 
     devShell.aarch64-darwin = with nixpkgs.legacyPackages.aarch64-darwin;
-      mkShell {packages = [alejandra];};
+      mkShell {
+        packages = [
+          alejandra
+          nfu
+        ];
+      };
   };
 }
