@@ -69,8 +69,8 @@ The repository uses direnv with `.envrc` containing `use flake` to automatically
 ## Custom Claude Code Package
 
 The configuration includes a custom derivation for Claude Code CLI that provides three binary variants:
-- `claude`: Default with `--dangerously-skip-permissions` (YOLO mode)  
-- `safe-claude`: With permission prompts
-- `yolo-claude`: Explicit YOLO mode with skipped permissions
+- `claude`: Default with permission prompts (safe mode)
+- `safe-claude`: With permission prompts (same as default)
+- `yolo-claude`: Explicit YOLO mode with `--dangerously-skip-permissions`
 
 This package is automatically installed on the personal machine configuration.

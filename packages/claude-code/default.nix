@@ -27,10 +27,9 @@ stdenv.mkDerivation rec {
 
     # Create the binary wrappers
     mkdir -p $out/bin
-    # Default claude (YOLO mode)
+    # Default claude (safe mode with permission prompts)
     makeWrapper ${nodejs}/bin/node $out/bin/claude \
-      --add-flags "$out/lib/node_modules/@anthropic-ai/claude-code/cli.js" \
-      --add-flags "--dangerously-skip-permissions"
+      --add-flags "$out/lib/node_modules/@anthropic-ai/claude-code/cli.js"
 
     # Safe claude (with permission prompts)
     makeWrapper ${nodejs}/bin/node $out/bin/safe-claude \
