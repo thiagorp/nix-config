@@ -48,6 +48,7 @@
         packages = [
           alejandra
           nfu
+          nodejs_22
         ];
       };
   };
