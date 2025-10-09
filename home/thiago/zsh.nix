@@ -43,6 +43,9 @@ in {
     initContent = let
       initExtraFirst = lib.mkBefore ''
         export PATH="$PATH:$HOME/.local/bin"
+
+        # Add opencode to PATH if it exists
+        [ -d "$HOME/.opencode/bin" ] && export PATH="$HOME/.opencode/bin:$PATH"
       '';
 
       initExtra = ''
