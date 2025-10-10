@@ -7,7 +7,7 @@
     username = "thiago";
     homeDirectory = "/Users/thiago";
 
-    packages = with pkgs; [bat fzf jq nixpkgs-fmt tig watchman];
+    packages = with pkgs; [bat fzf jq nixpkgs-fmt ripgrep tig watchman];
 
     stateVersion = "22.05";
   };
