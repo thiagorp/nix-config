@@ -8,6 +8,7 @@
   # Personal machine specific settings
   environment.systemPackages = with pkgs; [
     claude-code
+    codex
   ];
 
   # Personal machine services
