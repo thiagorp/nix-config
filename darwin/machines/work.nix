@@ -7,6 +7,7 @@
 
   # Work machine specific settings
   environment.systemPackages = with pkgs; [
+    codex
     claude-code
   ];
 
