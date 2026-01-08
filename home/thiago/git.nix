@@ -2,12 +2,14 @@
   programs.git = {
     enable = true;
 
-    userName = "Thiago Rodrigues de Paula";
-    userEmail = "thiago.rdp@gmail.com";
-
-    aliases = {co = "checkout";};
-
-    extraConfig = {push = {default = "simple";};};
+    settings = {
+      user = {
+        name = "Thiago Rodrigues de Paula";
+        email = "thiago.rdp@gmail.com";
+      };
+      alias = {co = "checkout";};
+      push = {default = "simple";};
+    };
 
     ignores = ["*.swp" "*.swo" ".DS_Store"];
   };
