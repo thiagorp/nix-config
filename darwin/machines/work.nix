@@ -5,6 +5,10 @@
 }: {
   networking.computerName = "Thiago's Work Computer";
 
+  environment.systemPackages = with pkgs; [
+    gh
+  ];
+
   # Work machine services
   services = {
     # Add work-specific services
