@@ -44,6 +44,17 @@ in {
       initExtraFirst = lib.mkBefore ''
         export PATH="$PATH:$HOME/.local/bin"
 
+        # Evaluate direnv for non-interactive shells (e.g., Claude Code)
+        if command -v direnv &>/dev/null && [[ -f ".envrc" ]]; then
+          eval "$(direnv export zsh)" 2>/dev/null || true
+        fi
+
+        # Add Homebrew to PATH if installed (Apple Silicon location)
+        [ -d "/opt/homebrew/bin" ] && eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+
+        # Add Node.js global packages to PATH if directory exists
+        [ -d "$HOME/.npm-global/bin" ] && export PATH="$HOME/.npm-global/bin:$PATH"
+
         # Add opencode to PATH if it exists
         [ -d "$HOME/.opencode/bin" ] && export PATH="$HOME/.opencode/bin:$PATH"
       '';
