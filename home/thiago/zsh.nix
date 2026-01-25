@@ -6,8 +6,17 @@
 }:
 with lib; let
   sourceLines = map (file: "source ${file}") [./zsh/git.zsh];
+
+  zsh-npm-scripts-autocomplete = pkgs.fetchFromGitHub {
+    owner = "grigorii-zander";
+    repo = "zsh-npm-scripts-autocomplete";
+    rev = "5d145e13150acf5dbb01dac6e57e57c357a47a4b";
+    sha256 = "sha256-Y34VXOU7b5z+R2SssCmbooVwrlmSxUxkObTV0YtsS50=";
+  };
 in {
   home.packages = [pkgs.oh-my-posh];
+
+  home.file.".oh-my-zsh-custom/plugins/zsh-npm-scripts-autocomplete".source = zsh-npm-scripts-autocomplete;
 
   programs.zsh = {
     enable = true;
@@ -71,6 +80,7 @@ in {
           eval "$(oh-my-posh init zsh --config ${./zsh/omp-theme.json})"
         fi
 
+
         ${concatStringsSep "\n" sourceLines}
       '';
     in
@@ -78,8 +88,8 @@ in {
 
     oh-my-zsh = {
       enable = true;
-
-      plugins = ["git" "node"];
+      custom = "$HOME/.oh-my-zsh-custom";
+      plugins = ["git" "node" "zsh-npm-scripts-autocomplete"];
     };
   };
 }
