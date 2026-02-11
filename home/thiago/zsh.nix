@@ -66,6 +66,9 @@ in {
 
         # Add opencode to PATH if it exists
         [ -d "$HOME/.opencode/bin" ] && export PATH="$HOME/.opencode/bin:$PATH"
+
+        # Add Bugsnag CLI to PATH if installed
+        [ -d "$HOME/.local/bugsnag/bin" ] && export PATH="$HOME/.local/bugsnag/bin:$PATH"
       '';
 
       initExtra = ''
