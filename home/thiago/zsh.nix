@@ -70,6 +70,10 @@ in {
         # Add Bugsnag CLI to PATH if installed
         [ -d "$HOME/.local/bugsnag/bin" ] && export PATH="$HOME/.local/bugsnag/bin:$PATH"
 
+        # Add fnm to PATH if installed
+        [ -d "$HOME/.fnm" ] && export PATH="$HOME/.fnm:$PATH" && eval "$(fnm env)"
+
+
         # Activate mise if installed
         command -v mise &>/dev/null && eval "$(mise activate zsh)"
       '';
