@@ -11,6 +11,10 @@
       url = "github:lnl7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -36,6 +40,7 @@
             system = "aarch64-darwin";
             modules = [
               ./darwin/configuration.nix
+              inputs.lix-module.darwinModules.lixFromNixpkgs
               configFile
             ];
             specialArgs = inputs // {inherit hostName;};
