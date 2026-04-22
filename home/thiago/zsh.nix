@@ -46,7 +46,6 @@ in {
     shellAliases = {
       drs = "sudo darwin-rebuild switch --flake ~/.config/nixpkgs";
       gcb = "git checkout -b";
-      gcm = "git checkout master";
     };
 
     initContent = let
