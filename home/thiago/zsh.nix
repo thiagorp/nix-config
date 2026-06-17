@@ -6,6 +6,8 @@
 }:
 with lib; let
   sourceLines = map (file: "source ${file}") [./zsh/git.zsh];
+  localZshConfig = "${config.home.homeDirectory}/.config/zsh/local.zsh";
+  localZshConfigDir = "${config.home.homeDirectory}/.config/zsh/conf.d";
 
   zsh-npm-scripts-autocomplete = pkgs.fetchFromGitHub {
     owner = "grigorii-zander";
@@ -91,13 +93,25 @@ in {
 
 
         ${concatStringsSep "\n" sourceLines}
+
+        # Source local zsh extensions that intentionally live outside this repo.
+        if [[ -r "${localZshConfig}" ]]; then
+          source "${localZshConfig}"
+        fi
+
+        if [[ -d "${localZshConfigDir}" ]]; then
+          for zsh_file in "${localZshConfigDir}"/*.zsh(N); do
+            source "$zsh_file"
+          done
+          unset zsh_file
+        fi
       '';
     in
       lib.mkMerge [initExtraFirst initExtra];
 
     oh-my-zsh = {
       enable = true;
-      custom = "$HOME/.oh-my-zsh-custom";
+      custom = "${config.home.homeDirectory}/.oh-my-zsh-custom";
       plugins = ["git" "node" "zsh-npm-scripts-autocomplete"];
     };
   };
